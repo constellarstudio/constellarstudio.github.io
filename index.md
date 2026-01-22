@@ -1,8 +1,7 @@
-# Constellar Studio / 星合工作室
-
-Welcome to Constellar Studio.
-
-Please select your language:
-
-- [English](/en/)
-- 中文（即将上线）
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/en/">
+    <link rel="canonical" href="/en/">
+  </head>
+</html>
