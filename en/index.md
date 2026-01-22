@@ -1,5 +1,6 @@
 ---
 title: Constellar Studio
+layout: default
 ---
 
 # Constellar Studio 星合工作室
