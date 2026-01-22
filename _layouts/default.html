@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header style="padding: 20px 0; border-bottom: 1px solid #eee;">
+  <nav style="max-width: 900px; margin: auto; display: flex; justify-content: space-between;">
+    <div>
+      <a href="/en/">Home</a>
+      &nbsp;&nbsp;
+      <a href="/en/cases/">Cases</a>
+      &nbsp;&nbsp;
+      <a href="/en/contact/">Contact</a>
+    </div>
+    <div>
+      <strong>EN</strong> |
+      <span style="color:#999;">中文</span>
+    </div>
+  </nav>
+</header>
+
+<main style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+  {{ content }}
+</main>
+
+</body>
+</html>
