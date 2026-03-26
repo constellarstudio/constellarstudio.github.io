@@ -39,33 +39,54 @@
   background: rgba(80, 120, 255, 0.35);
 }
 
-/* 语言切换器样式 */
+/* 导航栏整体字体微调 */
+nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.02em; /* 稍微拉开字间距，更有呼吸感 */
+  transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+  opacity: 0.6; /* 咨询公司常用的这种轻微淡出效果，比变色更高级 */
+}
+
+/* 极简语言切换器 */
 .lang-switch {
-  font-size: 14px;
   display: flex;
   align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .lang-switch a {
-  color: #666; /* 未选中语言的颜色 */
-  text-decoration: none;
-  transition: color 0.2s ease;
-  padding: 4px 8px;
-}
-
-.lang-switch a:hover {
-  color: #5078ff; /* 悬停时变成你案例卡片的主题蓝色 */
-  background: rgba(80, 120, 255, 0.1); /* 淡淡的底色反馈 */
-  border-radius: 4px;
+  color: #999; /* 未选中的语言用浅灰色 */
+  font-size: 13px;
+  text-transform: uppercase; /* 英文大写更有设计感 */
+  padding: 0 4px;
 }
 
 .lang-switch .active-lang {
-  color: #333;
+  color: #1a1a1a; /* 选中的语言用深色 */
+  font-size: 13px;
   font-weight: 600;
-  padding: 4px 8px;
+  text-transform: uppercase;
+  padding: 0 4px;
 }
 
 .lang-switch .separator {
-  margin: 0 4px;
-  color: #eee;
+  margin: 0 2px;
+  color: #ddd;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/* 进阶：给 header 增加一点高级的磨砂感（可选） */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px); /* 呼应你 case-card 的磨砂玻璃风格 */
+  z-index: 100;
 }
