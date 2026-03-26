@@ -38,3 +38,34 @@
 .btn:hover {
   background: rgba(80, 120, 255, 0.35);
 }
+
+/* 语言切换器样式 */
+.lang-switch {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.lang-switch a {
+  color: #666; /* 未选中语言的颜色 */
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 4px 8px;
+}
+
+.lang-switch a:hover {
+  color: #5078ff; /* 悬停时变成你案例卡片的主题蓝色 */
+  background: rgba(80, 120, 255, 0.1); /* 淡淡的底色反馈 */
+  border-radius: 4px;
+}
+
+.lang-switch .active-lang {
+  color: #333;
+  font-weight: 600;
+  padding: 4px 8px;
+}
+
+.lang-switch .separator {
+  margin: 0 4px;
+  color: #eee;
+}
