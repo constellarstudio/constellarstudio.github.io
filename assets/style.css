@@ -185,3 +185,13 @@ nav a:hover {
   color: var(--accent-blue); /* 选中语言也用蓝色，更醒目 */
   font-weight: 600;
 }
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  letter-spacing: -0.02em;
+  margin-bottom: 30px;
+  background: linear-gradient(120deg, #1a1a1a 0%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* 标题带一点隐约的渐变蓝，非常高级 */
+}
