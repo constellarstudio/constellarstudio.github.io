@@ -30,13 +30,13 @@
     <!-- 右侧语言切换 -->
     <div class="lang-switch">
       {% if page.url contains '/cn/' %}
-        <a href="{{ page.url | replace_first: '/cn/', '/en/' }}">EN</a>
+        <a href="{{ page.url | replace_first: '/cn/', '/en/' }}" class="lang-link">EN</a>
         <span class="separator">/</span>
         <span class="active-lang">中文</span>
       {% else %}
         <span class="active-lang">EN</span>
         <span class="separator">/</span>
-        <a href="{{ page.url | replace_first: '/en/', '/cn/' }}">中文</a>
+        <a href="{{ page.url | replace_first: '/en/', '/cn/' }}" class="lang-link">中文</a>
       {% endif %}
     </div>
 
