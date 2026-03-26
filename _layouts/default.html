@@ -28,16 +28,19 @@
     </div>
 
     <!-- 右侧语言切换 -->
-    <div>
-      {% assign cn_url = page.url | replace_first: '/en/', '/cn/' %}
-      {% assign en_url = page.url | replace_first: '/cn/', '/en/' %}
-
+    <div class="lang-switch">
       {% if page.url contains '/cn/' %}
-        <a href="{{ en_url }}">EN</a> |
-        <strong>中文</strong>
+        <a href="{{ page.url | replace: '/cn/', '/en/' }}">EN</a>
+        <span class="separator">|</span>
+        <strong class="active-lang">中文</strong>
       {% else %}
-        <strong>EN</strong> |
-        <a href="{{ cn_url }}">中文</a>
+        <strong class="active-lang">EN</strong>
+        <span class="separator">|</span>
+        {% if page.url == "/" %}
+          <a href="/cn/">中文</a>
+        {% else %}
+          <a href="{{ page.url | replace: '/en/', '/cn/' }}">中文</a>
+        {% endif %}
       {% endif %}
     </div>
 
