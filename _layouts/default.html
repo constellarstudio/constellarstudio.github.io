@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,27 +7,21 @@
 </head>
 <body>
 
-<header style="padding: 20px 0; border-bottom: 1px solid #eee;">
-  <nav style="max-width: 900px; margin: auto; display: flex; justify-content: space-between;">
+<header class="site-header">
+  <nav class="nav-container">
     
-    <!-- 左侧导航 -->
-    <div>
+    <div class="nav-links">
       {% if page.url contains '/cn/' %}
         <a href="/cn/">首页</a>
-        &nbsp;&nbsp;
         <a href="/cn/cases/">案例</a>
-        &nbsp;&nbsp;
         <a href="/cn/contact/">联系</a>
       {% else %}
         <a href="/en/">Home</a>
-        &nbsp;&nbsp;
         <a href="/en/cases/">Cases</a>
-        &nbsp;&nbsp;
         <a href="/en/contact/">Contact</a>
       {% endif %}
     </div>
 
-    <!-- 右侧语言切换 -->
     <div class="lang-switch">
       {% if page.url contains '/cn/' %}
         <a href="{{ page.url | replace_first: '/cn/', '/en/' }}" class="lang-link">EN</a>
@@ -43,7 +37,7 @@
   </nav>
 </header>
 
-<main style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+<main class="main-content">
   {{ content }}
 </main>
 
