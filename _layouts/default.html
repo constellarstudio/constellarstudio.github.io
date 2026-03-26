@@ -9,17 +9,38 @@
 
 <header style="padding: 20px 0; border-bottom: 1px solid #eee;">
   <nav style="max-width: 900px; margin: auto; display: flex; justify-content: space-between;">
+    
+    <!-- 左侧导航 -->
     <div>
-      <a href="/en/">Home</a>
-      &nbsp;&nbsp;
-      <a href="/en/cases/">Cases</a>
-      &nbsp;&nbsp;
-      <a href="/en/contact/">Contact</a>
+      {% if page.url contains '/cn/' %}
+        <a href="/cn/">首页</a>
+        &nbsp;&nbsp;
+        <a href="/cn/cases/">案例</a>
+        &nbsp;&nbsp;
+        <a href="/cn/contact/">联系</a>
+      {% else %}
+        <a href="/en/">Home</a>
+        &nbsp;&nbsp;
+        <a href="/en/cases/">Cases</a>
+        &nbsp;&nbsp;
+        <a href="/en/contact/">Contact</a>
+      {% endif %}
     </div>
+
+    <!-- 右侧语言切换 -->
     <div>
-      <strong>EN</strong> |
-      <span style="color:#999;">中文</span>
+      {% assign cn_url = page.url | replace_first: '/en/', '/cn/' %}
+      {% assign en_url = page.url | replace_first: '/cn/', '/en/' %}
+
+      {% if page.url contains '/cn/' %}
+        <a href="{{ en_url }}">EN</a> |
+        <strong>中文</strong>
+      {% else %}
+        <strong>EN</strong> |
+        <a href="{{ cn_url }}">中文</a>
+      {% endif %}
     </div>
+
   </nav>
 </header>
 
