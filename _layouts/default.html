@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} | ConstellarStudio</title>
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
@@ -11,7 +11,7 @@
   <nav class="nav-container">
     
     <a href="/{{ page.url | split: '/' | slice: 1 | first }}/" class="logo">
-      constellar<span>studio</span>
+      Constellar<span>Studio</span>
     </a>
 
     <div class="nav-links">
