@@ -83,7 +83,7 @@ nav a:hover {
 
 /* 统一中文和英文选中态的样式 */
 .lang-switch .active-lang {
-  color: #1a1a1a; /* 选中后的深色 */
+  color: var(--accent-blue); /* 选中后的深色 */
   font-weight: 600;
   padding: 0 4px;
   text-transform: uppercase;
@@ -173,9 +173,6 @@ nav a:hover {
   width: fit-content;
 }
 
-/* =========================================
-   按钮改进：加入品牌色反馈
-   ========================================= */
 .btn {
   display: inline-block;
   margin-top: 25px;
@@ -189,6 +186,8 @@ nav a:hover {
   border-bottom: 2px solid rgba(80, 120, 255, 0.2);
   transition: all 0.3s ease;
   width: fit-content;
+  position: relative;
+  z-index: 2
 }
 
 .btn:hover {
@@ -197,10 +196,14 @@ nav a:hover {
   padding-left: 5px; /* 悬停时稍微右移，增加动感 */
 }
 
-/* 语言切换按钮的蓝色强调 */
-.lang-switch .active-lang {
-  color: var(--accent-blue); /* 选中语言也用蓝色，更醒目 */
-  font-weight: 600;
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1; /* 在按钮文字下方，但在卡片背景上方 */
 }
 
 h1 {
