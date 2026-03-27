@@ -9,17 +9,17 @@ title: 联系我们
 
 <div class="contact-method-container">
   <div class="contact-item">
-    <a href="mailto:losaandes@gmail.com?subject=Constellar%20Studio%20Inquiry" class="contact-full-link">
       <i class="fas fa-envelope-open-text contact-icon"></i>
-      <h3>电子邮件 / Email</h3>
+      <h3>电子邮件</h3>
       <p>点击下方链接直接发送邮件：</p>
-      <span class="contact-value">losaandes@gmail.com</span>
-    </a>
+      <a href="mailto:losaandes@gmail.com?subject=Constellar%20Studio%20Inquiry" class="contact-link">
+        <span class="contact-value">losaandes@gmail.com</span>
+      </a>
   </div>
 
   <div class="contact-item">
     <i class="fab fa-weixin contact-icon"></i>
-    <h3>微信 / WeChat</h3>
+    <h3>微信</h3>
     <p>添加请注明“项目咨询”：</p>
     <span class="contact-id">sqcyqswk</span>
   </div>
