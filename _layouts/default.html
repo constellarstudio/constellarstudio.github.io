@@ -10,6 +10,10 @@
 <header class="site-header">
   <nav class="nav-container">
     
+    <a href="/{{ page.url | split: '/' | slice: 1 | first }}/" class="logo">
+      constellar<span>studio</span>
+    </a>
+
     <div class="nav-links">
       {% if page.url contains '/cn/' %}
         <a href="/cn/">首页</a>
