@@ -5,11 +5,9 @@ title: 联系我们
 
 # 咨询与合作
 
-如果您有任何关于 InSAR 技术咨询、项目协作或数据分析的需求，请填写下方表格，我们将尽快回复。
+如果您有任何关于 InSAR 技术咨询、项目协作或数据分析的需求，请填写下方表格。
 
-<form action="https://getform.io/f/ozqbyi053lc" method="POST" class="contact-form">
-  <input type="hidden" name="_subject" value="Constellar studio received a question/request">
-  
+<form action="https://forminit.com/f/ozqbyi053lc" method="POST" class="contact-form">
   <div class="form-group">
     <label>您的姓名 / Name</label>
     <input type="text" name="name" placeholder="请输入姓名" required>
@@ -17,7 +15,7 @@ title: 联系我们
 
   <div class="form-group">
     <label>联系方式 (手机/邮箱/微信号)</label>
-    <input type="text" name="contact_info" placeholder="方便我们回复您的渠道" required>
+    <input type="text" name="contact" placeholder="方便我们回复您的渠道" required>
   </div>
 
   <div class="form-group">

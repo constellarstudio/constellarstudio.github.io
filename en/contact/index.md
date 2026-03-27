@@ -5,11 +5,9 @@ title: Contact Us
 
 # Inquiries & Requests
 
-Please use the form below to submit your research inquiries or project requests. Our team will get back to you shortly.
+Please use the form below to submit your research inquiries or project requests.
 
-<form action="https://getform.io/f/ozqbyi053lc" method="POST" class="contact-form">
-  <input type="hidden" name="_subject" value="Constellar studio received a question/request">
-  
+<form action="https://forminit.com/f/ozqbyi053lc" method="POST" class="contact-form">
   <div class="form-group">
     <label>Full Name</label>
     <input type="text" name="name" placeholder="Your name" required>
