@@ -17,9 +17,3 @@ Through careful analysis of radar data, we aim to support decision-making in eng
 - Surface deformation measurement, and change detection across multiple spatial and temporal scales  
 - Risk identification in roads, bridges, buildings, and other critical infrastructure
 - Detection and environmental consulting for natural hazards such as wildfires, floods, landslides, and permafrost degradation
-
-## Contact
-
-If you are interested in collaboration or learning more about our work, please reach out:
-
-**Email:** losaandes@gmail.com
