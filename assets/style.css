@@ -298,3 +298,28 @@ h1 {
     border-radius: 4px;
     color: #1a1a1a;
 }
+
+@media (max-width: 768px) {
+    .nav-links a {
+        font-size: 17px;    /* 稍微调大，方便手指点击 */
+        margin-right: 15px; /* 稍微缩小间距防止换行 */
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .lang-switch {
+        font-size: 15px;
+    }
+
+    .contact-method-container {
+        flex-direction: column; /* 手机上变成上下堆叠 */
+        gap: 20px;
+    }
+
+    .main-content {
+        padding: 30px 20px;
+        width: 95%;
+    }
+}
