@@ -29,9 +29,42 @@
 }
 
 .main-content {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+  max-width: 800px; /* 稍微缩小宽度，提升阅读专注度 */
+  background: #ffffff;
+  padding: 60px 80px; /* 增加内边距，让文字更有呼吸感 */
+  margin: 60px auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02); /* 极细微的投影 */
+}
+
+/* 案例页标题样式 */
+.main-content h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+/* 案例页段落样式 */
+.main-content p {
+  font-size: 17px; /* 略大一点的字号 */
+  color: #3a3a3a;  /* 柔和的深灰色 */
+  line-height: 1.8; /* 增大行高，消除拥挤感 */
+  margin-bottom: 25px;
+}
+
+/* 强调文字（如 LOS, dNBR 等术语） */
+.main-content strong {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.main-content img {
+  max-width: 100%;    /* 图片最大宽度不超过容器 */
+  height: auto;       /* 高度按比例自适应 */
+  display: block;     /* 消除下方间隙 */
+  margin: 30px auto;  /* 居中并增加上下间距 */
+  border-radius: 6px; /* 增加微圆角，更柔和 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 淡淡的阴影，让专业图表更立体 */
 }
 
 /* =========================================
@@ -42,7 +75,7 @@
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #1a1a1a;
-  background-color: #fff;
+  background-color: #f9f9fb;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased; /* 字体抗锯齿，更精致 */
 }
@@ -160,12 +193,12 @@ nav a:hover {
 
 .case-card .btn::after {
   content: "";
-  position: absolute;
+  position: absolute; /* 相对于 .case-card 定位 */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5; /* 确保它在最上层 */
+  right: 0;
+  bottom: 0;
+  z-index: 10; /* 确保在卡片最上层 */
 }
 
 .tag {
@@ -186,7 +219,7 @@ nav a:hover {
   display: inline-block;
   margin-top: 25px;
   padding: 0 0 4px 0;
-  color: var(--accent-blue); /* 按钮使用核心蓝色 */
+  color: var(--accent-blue);
   text-decoration: none;
   font-weight: 600;
   font-size: 13px;
@@ -195,8 +228,6 @@ nav a:hover {
   border-bottom: 2px solid rgba(80, 120, 255, 0.2);
   transition: all 0.3s ease;
   width: fit-content;
-  position: relative;
-  z-index: 2
 }
 
 .btn:hover {
