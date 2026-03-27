@@ -247,37 +247,61 @@ h1 {
   -webkit-text-fill-color: transparent; /* 标题带一点隐约的渐变蓝，非常高级 */
 }
 
-.contact-form {
-    margin-top: 30px;
+.contact-method-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
-.form-group {
-    margin-bottom: 20px;
+
+.contact-item {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(80, 120, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
 }
-.form-group label {
-    display: block;
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    margin-top: 0;
+    color: var(--accent-blue);
+    border-bottom: 2px solid rgba(80, 120, 255, 0.1);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.contact-item p {
     font-size: 14px;
+    color: #666;
+    margin: 15px 0 10px 0;
+}
+
+.contact-link {
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.2s;
 }
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: 15px;
+
+.contact-link:hover {
+    color: var(--accent-blue);
 }
-.submit-btn {
-    background: var(--accent-blue);
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 4px;
+
+.contact-id {
+    font-size: 18px;
     font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-.submit-btn:hover {
-    background: #0033ff;
+    color: #1a1a1a;
+    background: #f0f4ff;
+    padding: 4px 12px;
+    border-radius: 4px;
+    display: inline-block;
 }

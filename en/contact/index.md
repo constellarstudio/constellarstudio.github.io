@@ -5,21 +5,18 @@ title: Contact Us
 
 # Inquiries & Requests
 
-Please use the form below to submit your research inquiries or project requests.
+For research inquiries, technical consulting (InSAR), or project requests, please reach out to us directly:
 
-<form action="https://forminit.com/f/ozqbyi053lc" method="POST" class="contact-form">
-<input type="hidden" name="_subject" value="Constellar studio received a question/request">
-<div class="form-group">
-<label>Full Name</label>
-<input type="text" name="name" placeholder="Your name" required>
+<div class="contact-method-container">
+  <div class="contact-item">
+    <h3>Email</h3>
+    <p>Click below to open your mail client:</p>
+    <a href="mailto:losaandes@gmail.com?subject=Constellar%20Studio%20Inquiry" class="contact-link">losaandes@gmail.com</a>
+  </div>
+
+  <div class="contact-item">
+    <h3>WeChat</h3>
+    <p>Scan or add by ID:</p>
+    <span class="contact-id">sqcyqswk</span>
+  </div>
 </div>
-<div class="form-group">
-<label>Email Address</label>
-<input type="email" name="email" placeholder="email@example.com" required>
-</div>
-<div class="form-group">
-<label>Your Message / Request</label>
-<textarea name="message" rows="6" placeholder="Please describe your requirements..." required></textarea>
-</div>
-<button type="submit" class="submit-btn">Submit</button>
-</form>
