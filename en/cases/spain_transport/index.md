@@ -13,4 +13,4 @@ In contrast, another localized subsidence detected along the railway between La 
 
 Overall, these results demonstrate that Sentinel-1-based InSAR time-series analysis can simultaneously detect regional-scale and localized ground deformation signals. In areas with high coherence (such as the Valencia region), this methodology is capable of resolving the differential response of different components of infrastructure (e.g., embankments vs. bridges). Therefore, InSAR technology holds significant potential for monitoring urban and transport infrastructure, providing early warning information for subsidence and damage during long-term operations.
 
-![Regional and Localized Subsidence Mapping in Valencia](/assets/images/spain_transport/map_big.png)
+![Regional and Localized Subsidence Mapping in Valencia](/assets/images/spain_transport/map_big.webp)

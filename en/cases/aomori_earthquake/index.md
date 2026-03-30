@@ -15,4 +15,4 @@ ALOS-2 and ALOS-4 observations indicated approximately 5 cm of subsidence and 9 
 
 This means that the ascending track is almost perfectly self-consistent with the "true deformation" in LOS space, while the descending track clearly "over-responded" to the signal. This highlights the critical importance of cross-calibrating multi-orbit InSAR datasets in complex horizontal deformation scenarios.
 
-![Aomori Earthquake Deformation Decomposition](/assets/images/aomori_earthquake/aomorieq.png)
+![Aomori Earthquake Deformation Decomposition](/assets/images/aomori_earthquake/aomorieq.webp)

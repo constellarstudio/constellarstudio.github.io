@@ -305,6 +305,12 @@ h1 {
         margin-right: 15px; /* 稍微缩小间距防止换行 */
     }
 
+    .nav-container {
+        padding: 0 20px;
+        flex-direction: column; /* 如果导航链接太多，手机上可以考虑上下排列 */
+        gap: 10px;
+    }
+
     .logo {
         font-size: 22px;
     }
@@ -313,13 +319,19 @@ h1 {
         font-size: 15px;
     }
 
+    .case-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
     .contact-method-container {
         flex-direction: column; /* 手机上变成上下堆叠 */
         gap: 20px;
     }
 
     .main-content {
-        padding: 30px 20px;
-        width: 95%;
+        padding: 25px 15px;
+        margin: 0;
+        border-radius: 0; /* 手机端全屏展示，取消圆角更好看 */
     }
 }

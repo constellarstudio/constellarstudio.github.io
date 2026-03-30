@@ -13,4 +13,4 @@ title: 基于时序InSAR的交通基础设施沉降监测
 
 总体而言，本研究结果表明，基于 Sentinel-1 的 InSAR 时序分析能够同时探测区域尺度与局部尺度的地表形变信号。在相干性较高的区域（如西班牙东南部 Valencia 地区），该方法不仅能够识别大范围沉降趋势，还具备一定能力分辨基础设施不同组成部分（如路堤与桥梁）的差异性响应。然而，形变信号的可解释性在很大程度上依赖于相干像素的空间密度与分布。因此，InSAR 技术在城市及交通基础设施监测中具有重要潜力，可为道路与结构长期使用过程中的沉降与损伤提供早期预警信息。
 
-![Valencia 地区整体形变图](/assets/images/spain_transport/map_big.png)
+![Valencia 地区整体形变图](/assets/images/spain_transport/map_big.webp)

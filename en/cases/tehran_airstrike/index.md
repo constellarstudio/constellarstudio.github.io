@@ -9,7 +9,7 @@ Recently, parts of Tehran were impacted by airstrike events, leading to structur
 
 This study conducts a change detection analysis focus on performing amplified checks on several damaged areas mentioned in news reports, including the Azadi Sports Complex, Gandhi Hospital, Motahari Hospital, and the surroundings of the Golestan Palace. Through high-resolution visual inspection, significant change signals (marked in yellow) can be clearly identified in these locations.
 
-![Amplified visual inspection of damage results](/assets/images/tehran_airstrike/small_map.png)
+![Amplified visual inspection of damage results](/assets/images/tehran_airstrike/small_map.webp)
 
 Specifically, changes within the Azadi Sports Complex are mainly concentrated on the stadium’s stand architecture, indicating localized structural damage. The surroundings of Gandhi Hospital and Motahari Hospital exhibit larger patches of change, revealing more extensive structural disturbance. Overall, the change detection results demonstrate good spatial consistency with public reports, indicating that the methodology can effectively identify potential airstrike-damaged zones.
 
@@ -17,6 +17,6 @@ The study used a tailored design to distinguish true changes caused by building 
 
 Regarding change intensity, the study adopted the absolute difference in radar amplitude across time periods, setting a threshold of 3 dB. In the dry urban environment of Tehran, structural damage often breaks the existing double-bounce geometry, leading to significant backscatter intensity changes.
 
-![Tehran Urban Area SAR Amplitude Change Results](/assets/images/tehran_airstrike/large_map_ampchange.png)
+![Tehran Urban Area SAR Amplitude Change Results](/assets/images/tehran_airstrike/large_map_ampchange.webp)
 
 The final results are obtained through a spatial intersection of the low-coherence mask and the amplitude change mask. This multi-criteria coupled strategy significantly improves reliability, as only pixels satisfying both coherence loss and significant backscatter intensity change are identified as potential change zones. This conservative extraction method effectively suppresses false alarms caused by environmental factors or random noise. Overall, this approach provides a robust means for rapidly identifying extensive structural damage in complex urban environments.
