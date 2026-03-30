@@ -369,15 +369,12 @@ h1 {
     line-height: 1.4;
 }
 
-/* =========================================
-   ISO 认证徽章优化
-   ========================================= */
 .iso-badge-container {
-    position: fixed;
-    bottom: 30px; /* 距离底部 */
-    right: 40px;  /* 距离右侧 */
-    width: 220px; /* 调大尺寸，确保看清证书内容 */
-    z-index: 10000; /* 确保在最顶层 */
+    position: relative; 
+    display: block;
+    width: 220px; 
+    margin: 60px auto 20px auto; 
+    z-index: 10; 
     
     background: transparent !important;
     backdrop-filter: none !important;
@@ -389,7 +386,6 @@ h1 {
 .iso-badge-container:hover {
     transform: none !important;
     background: transparent !important;
-    box-shadow: none !important;
 }
 
 .iso-badge-container img {
@@ -433,10 +429,7 @@ h1 {
     }
 
     .main-content {
-        padding: 25px 15px;
-        margin: 0;
-        border-radius: 0; /* 手机端全屏展示，取消圆角更好看 */
-        padding-bottom: 100px !important;
+        padding-bottom: 40px !important;
     }
 
     .customer-grid {
@@ -445,9 +438,9 @@ h1 {
     }
     
     .iso-badge-container {
-        bottom: 20px;
-        right: 20px;
-        width: 150px;
+        position: relative; /* 确保移动端也是跟随滚动 */
+        width: 160px;
+        margin: 40px auto 20px auto;
     }
 }
 
