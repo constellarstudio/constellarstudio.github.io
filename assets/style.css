@@ -299,6 +299,114 @@ h1 {
     color: #1a1a1a;
 }
 
+没问题，Sophy，我们要的就是那种“顶级咨询公司”的专业感。目前的页面确实显得有些单薄，图标太小会导致视觉重心不稳。
+
+为了达到你想要的高级感和冲击力，我们需要对 style.css 进行一些“外科手术”，并在 index.md 中使用更整洁的结构。
+
+1. 修改 style.css (增加以下样式)
+你可以直接把这段代码加在 style.css 的末尾。我为你设计了一个大气的标题样式，以及一个响应式的 Logo 墙网格。
+
+CSS
+/* =========================================
+   合作客户板块 (Consulting Style)
+   ========================================= */
+
+.section-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent-blue), transparent);
+    margin: 60px 0;
+    opacity: 0.3;
+}
+
+.customers-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #1a1a1a;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.customers-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-blue);
+    margin: 15px auto 0;
+}
+
+.customer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5列等分 */
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+.customer-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.customer-item:hover {
+    transform: translateY(-5px);
+}
+
+.customer-logo {
+    width: 100%;
+    max-width: 140px; /* 调大 Logo */
+    height: 100px;    /* 固定高度确保对齐 */
+    object-fit: contain; /* 保持比例不拉伸 */
+    filter: grayscale(100%); /* 默认灰色，更高级 */
+    opacity: 0.7;
+    transition: all 0.4s ease;
+    margin-bottom: 15px !important; /* 覆盖全局 margin */
+    box-shadow: none !important;    /* 去掉全局阴影 */
+}
+
+.customer-item:hover .customer-logo {
+    filter: grayscale(0%); /* 悬停恢复彩色 */
+    opacity: 1;
+}
+
+.customer-name {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    line-height: 1.4;
+    transition: color 0.3s;
+}
+
+.customer-item:hover .customer-name {
+    color: var(--accent-blue);
+}
+
+/* =========================================
+   ISO 认证徽章优化
+   ========================================= */
+.iso-badge-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 140px;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+.iso-badge-container img {
+    width: 100%;
+    height: auto;
+    box-shadow: none !important; /* 彻底移除图片阴影 */
+    background: transparent !important; /* 确保背景透明 */
+}
+
 @media (max-width: 768px) {
     .nav-links a {
         font-size: 17px;    /* 稍微调大，方便手指点击 */
@@ -333,5 +441,15 @@ h1 {
         padding: 25px 15px;
         margin: 0;
         border-radius: 0; /* 手机端全屏展示，取消圆角更好看 */
+    }
+
+    .customer-grid {
+        grid-template-columns: repeat(2, 1fr); /* 手机端 2 列 */
+        gap: 30px;
+    }
+    .iso-badge-container {
+        position: static;
+        margin: 40px auto;
+        width: 120px;
     }
 }
