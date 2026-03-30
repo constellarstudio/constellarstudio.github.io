@@ -24,7 +24,7 @@ Through careful analysis of radar data, we aim to support decision-making in eng
 
 <div class="customer-grid">
   <div class="customer-item">
-    <img src="/assets/images/cooperations/coop_air.jpeg" class="customer-logo" alt="AIR">
+    <img src="/assets/images/cooperations/coop_air.png" class="customer-logo" alt="AIR">
     <span class="customer-name">Aerospace Information <br>Research Institute</span>
   </div>
   <div class="customer-item">
@@ -36,7 +36,7 @@ Through careful analysis of radar data, we aim to support decision-making in eng
     <span class="customer-name">Chinese Academy of <br>Surveying and Mapping</span>
   </div>
   <div class="customer-item">
-    <img src="/assets/images/cooperations/coop_tjuni.jpeg" class="customer-logo" alt="TJU">
+    <img src="/assets/images/cooperations/coop_tjuni.png" class="customer-logo" alt="TJU">
     <span class="customer-name">Tianjin <br>University</span>
   </div>
   <div class="customer-item">

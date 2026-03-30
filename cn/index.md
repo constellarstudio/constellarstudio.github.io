@@ -24,7 +24,7 @@ layout: default
 
 <div class="customer-grid">
   <div class="customer-item">
-    <img src="/assets/images/cooperations/coop_air.jpeg" class="customer-logo" alt="中国科学院空天信息研究院">
+    <img src="/assets/images/cooperations/coop_air.png" class="customer-logo" alt="中国科学院空天信息研究院">
     <span class="customer-name">中国科学院<br>空天信息研究院</span>
   </div>
   <div class="customer-item">
@@ -36,7 +36,7 @@ layout: default
     <span class="customer-name">中国测绘<br>科学研究院</span>
   </div>
   <div class="customer-item">
-    <img src="/assets/images/cooperations/coop_tjuni.jpeg" class="customer-logo" alt="天津大学">
+    <img src="/assets/images/cooperations/coop_tjuni.png" class="customer-logo" alt="天津大学">
     <span class="customer-name">天津大学</span>
   </div>
   <div class="customer-item">
