@@ -378,32 +378,28 @@ h1 {
     right: 40px;  /* 距离右侧 */
     width: 220px; /* 调大尺寸，确保看清证书内容 */
     z-index: 10000; /* 确保在最顶层 */
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     
-    /* 增加悬浮质感 */
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(8px); /* 毛玻璃效果 */
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid rgba(80, 120, 255, 0.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0;
 }
 
 .iso-badge-container:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 12px 30px rgba(80, 120, 255, 0.15);
+    transform: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .iso-badge-container img {
     width: 100%;
     height: auto;
     display: block;
-    /* 强制清除可能影响透明度的样式 */
     background: transparent !important;
     box-shadow: none !important;
     border: none !important;
-    padding: 0 !important;
+    filter: none !important;
 }
 
 @media (max-width: 768px) {
@@ -452,7 +448,6 @@ h1 {
         bottom: 20px;
         right: 20px;
         width: 150px;
-        padding: 6px;
     }
 }
 
