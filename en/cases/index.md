@@ -31,7 +31,7 @@ Explore our latest projects in remote sensing and geospatial analysis.
 </div>
 
 <div class="case-card">
-<span class="tag">Natural Hazards / Energy</span>
+<span class="tag">Natural Hazards</span>
 <h3>Tracking Wildfire Damage with Satellite-Derived Burn Severity</h3>
 <p>Using Sentinel-2 and dNBR to quantify burn severity and map the spatial evolution of the Dragon Bravo Fire.</p>
 <a href="/en/cases/dragon_bravo_fire/" class="btn">Read More</a>
