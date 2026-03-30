@@ -44,7 +44,3 @@ Through careful analysis of radar data, we aim to support decision-making in eng
     <span class="customer-name">University of Texas <br>at Austin</span>
   </div>
 </div>
-
-<div class="iso-badge-container">
-  <img src="/assets/images/certificate/iso_cert.png" alt="ISO 9001 Certified">
-</div>

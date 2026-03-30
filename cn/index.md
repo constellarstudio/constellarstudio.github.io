@@ -44,7 +44,3 @@ layout: default
     <span class="customer-name">美国德克萨斯<br>州立大学</span>
   </div>
 </div>
-
-<div class="iso-badge-container">
-  <img src="/assets/images/certificate/iso_cert.png" alt="ISO 9001 认证">
-</div>
