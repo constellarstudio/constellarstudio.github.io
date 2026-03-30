@@ -17,3 +17,29 @@ layout: default
 - 多时空尺度下的地表形变监测与变化检测  
 - 道路、桥梁、建筑等关键基础设施风险识别  
 - 野火、洪水、滑坡及多年冻土等自然灾害监测与环境咨询  
+
+<hr style="border: 2px solid #0056b3; margin: 40px 0;">
+
+## **合作客户**
+
+<div style="display: flex; justify-content: space-around; align-items: center; text-align: center; flex-wrap: wrap; margin-top: 20px;">
+  <div style="margin: 10px;">
+    <img src="/assets/images/cooperations/coop_air.jpeg" alt="空天院" style="height: 60px;"><br><span>中国科学院空填信息研究院</span>
+  </div>
+  <div style="margin: 10px;">
+    <img src="/assets/images/cooperations/coop_caf.png" alt="林科院" style="height: 60px;"><br><span>中国林业科学研究院</span>
+  </div>
+  <div style="margin: 10px;">
+    <img src="/assets/images/cooperations/coop_casm.png" alt="测科院" style="height: 60px;"><br><span>中国测绘科学研究院</span>
+  </div>
+  <div style="margin: 10px;">
+    <img src="/assets/images/cooperations/coop_tjuni.jpeg" alt="天津大学" style="height: 60px;"><br><span>天津大学</span>
+  </div>
+  <div style="margin: 10px;">
+    <img src="/assets/images/cooperations/coop_unioftexas.png" alt="德克萨斯大学" style="height: 60px;"><br><span>美国德克萨斯州立大学</span>
+  </div>
+</div>
+
+<div style="position: fixed; bottom: 20px; right: 20px; width: 150px; z-index: 1000;">
+  <img src="/assets/images/certificate/iso_cert.png" alt="ISO 9001 认证">
+</div>
