@@ -195,13 +195,13 @@ nav a:hover {
 
 .case-card.has-bg {
   /* Your requested light navy color */
-  background-color: rgb(122, 149, 194); 
+  background-color: rgb(75, 102, 147); 
   
   /* luminosity strips the image color and applies the background-color tint */
   background-blend-mode: luminosity; 
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(122, 149, 194, 0.3);
+  border: 1px solid rgba(75, 102, 147, 0.3);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
