@@ -467,63 +467,60 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    .nav-links a {
-        font-size: 17px;    /* 稍微调大，方便手指点击 */
-        margin-right: 15px; /* 稍微缩小间距防止换行 */
-    }
-
+    /* 1. 导航栏紧凑化 */
     .nav-container {
-        padding: 0 20px;
-        flex-direction: column; /* 如果导航链接太多，手机上可以考虑上下排列 */
-        gap: 10px;
+        padding: 10px 15px; /* 减小上下左右边距 */
+        gap: 5px;
     }
 
     .logo {
-        font-size: 22px;
+        font-size: 18px; /* 缩小 Logo */
     }
 
-    .lang-switch {
-        font-size: 15px;
+    .nav-links a {
+        font-size: 15px; /* 稍微缩小导航链接 */
+        margin-right: 10px;
+    }
+
+    /* 2. 极简页边距 */
+    .main-content {
+        padding: 15px 10px !important; /* 左右边距降至 10px，几乎贴边 */
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 3. 缩小案例卡片 */
+    .case-card.has-bg {
+        padding: 20px; /* 大幅减小卡片内部留白，使其变短 */
+        min-height: auto;
+    }
+
+    /* 缩小标题和正文，保留标签和按钮大小 */
+    .case-card.has-bg h3 {
+        font-size: 20px !important; /* 标题从 24px 降至 20px */
+        margin-bottom: 10px;
+    }
+
+    .case-card.has-bg p {
+        font-size: 14px !important; /* 正文降至 14px */
+        line-height: 1.5;
+    }
+
+    /* 标签和按钮字号保持不变 (14px / 16px) */
+    .case-card.has-bg .tag {
+        font-size: 14px; 
+        margin-bottom: 15px;
+    }
+
+    .case-card.has-bg .btn {
+        font-size: 16px;
+        margin-top: 20px;
     }
 
     .case-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .case-card.has-bg {
-        padding: 25px; /* 移动端适当减小内边距 */
-    }
-
-    /* 3. 确保文字在小屏幕上不会过大导致溢出 */
-    .case-card.has-bg h3 {
-        font-size: 24px; /* 略微调小标题 */
-    }
-    
-    .case-card.has-bg p {
-        font-size: 16px;
-    }
-
-    .contact-method-container {
-        flex-direction: column; /* 手机上变成上下堆叠 */
-        gap: 20px;
-    }
-
-    .main-content {
-        padding: 20px 20px !important; /* 从 60px 缩减到 20px */
-        margin: 0 auto; /* 移除外边距，充分利用宽度 */
-        border-radius: 0; /* 移动端去掉圆角通常视觉效果更好 */
-    }
-
-    .customer-grid {
-        grid-template-columns: repeat(2, 1fr); /* 手机端 2 列 */
-        gap: 30px;
-    }
-    
-    .iso-badge-container {
-        position: relative; /* 确保移动端也是跟随滚动 */
-        width: 160px;
-        margin: 40px auto 20px auto;
+        gap: 15px; /* 缩小卡片之间的间距 */
     }
 }
 
