@@ -195,7 +195,7 @@ nav a:hover {
 
 .case-card.has-bg {
   /* Lighter gray with a very subtle blue tint */
-  background-color: rgb(146, 188, 255); 
+  background-color: rgb(113, 144, 193); 
   /* luminosity maps the radar figures to the light tint above */
   background-blend-mode: luminosity; 
   background-size: cover;
@@ -249,7 +249,7 @@ nav a:hover {
 
 /* Interactive Hover State */
 .case-card.has-bg:hover {
-  background-color: #ffffff; /* Becomes clearer on hover */
+  background-color: rgb(113, 144, 193); /* Becomes clearer on hover */
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(80, 120, 255, 0.15);
 }
