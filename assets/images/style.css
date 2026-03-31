@@ -5,12 +5,12 @@
 }
 
 /* =========================================
-   全局样式与布局
+   1. 全局与基础布局 (保留)
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@400;500;600&display=swap');
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   color: #1a1a1a;
   background-color: #f5f7f9;
   margin: 0;
@@ -22,14 +22,14 @@ body {
   margin: 40px auto;
   padding: 40px 60px;
   background: #ffffff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   border-radius: 16px;
   position: relative;
   z-index: 1;
 }
 
 /* =========================================
-   导航栏 (Header/Nav)
+   2. 导航与页脚 (精简并保留)
    ========================================= */
 .nav-container {
   display: flex;
@@ -41,32 +41,29 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
   font-size: 24px;
-  font-weight: 500;
-  color: #1a1a1a;
   text-decoration: none;
-  letter-spacing: -0.5px;
+  color: #1a1a1a;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #4a4a4a;
   margin-left: 30px;
-  font-weight: 500;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: var(--accent-blue);
-}
+.nav-links a:hover { color: var(--accent-blue); }
+
+footer { text-align: center; padding: 40px; color: #888; font-size: 14px; }
 
 /* =========================================
-   案例卡片 (Case Cards) - 核心部分已精简合并
+   3. 案例卡片核心样式 (精准修改)
    ========================================= */
 .case-grid {
   display: grid;
@@ -77,22 +74,20 @@ body {
 
 .case-card.has-bg {
   position: relative;
-  /* 你要求的带一点蓝调的浅灰色覆盖层 */
-  background-color: rgb(225, 230, 240); 
+  /* 要求的浅灰色+蓝调覆盖层 */
+  background-color: rgb(225, 230, 245); 
   background-blend-mode: luminosity;
   background-size: cover;
   background-position: center;
   padding: 45px;
   border-radius: 12px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.4s ease;
   border: 1px solid rgba(80, 120, 255, 0.1);
 }
 
-/* 统一卡片内文字颜色为浅蓝色，并增加阴影以保证可读性 */
+/* 要求的浅蓝色文字 + 阴影增强可读性 */
 .case-card.has-bg h3,
 .case-card.has-bg p,
 .case-card.has-bg .btn {
@@ -104,47 +99,33 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
   margin: 15px 0;
-  line-height: 1.3;
 }
 
 .case-card.has-bg p {
   font-size: 18px;
   margin-bottom: 25px;
-  flex-grow: 1;
 }
 
-/* 标签样式：降低透明度，增强对比 */
+/* 标签样式：不透明度增加 */
 .case-card.has-bg .tag {
   font-size: 14px;
   padding: 6px 16px;
-  background: rgba(10, 30, 70, 0.85); /* 深色背景，低透明度 */
+  background: rgba(10, 30, 70, 0.9) !important; 
   color: #ffffff !important;
   border-radius: 6px;
   font-weight: 600;
-  text-shadow: none;
+  text-shadow: none !important;
+  width: fit-content;
 }
 
-/* “阅读更多”按钮样式 */
 .case-card.has-bg .btn {
-  text-decoration: none;
-  font-weight: 600;
   font-size: 16px;
+  text-decoration: none;
   border-bottom: 2px solid rgba(224, 234, 255, 0.6);
-  padding-bottom: 4px;
-  transition: all 0.3s;
+  width: fit-content;
 }
 
-.case-card.has-bg .btn:hover {
-  border-bottom-color: #ffffff;
-  transform: translateX(5px);
-}
-
-.case-card.has-bg:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-/* 背景图指定 - 使用相对路径更稳健 */
+/* 背景图定义 */
 .bg-spain { background-image: url('../assets/images/case_bg/traffic.png'); }
 .bg-tehran { background-image: url('../assets/images/case_bg/buildingclapse.jpg'); }
 .bg-aomori { background-image: url('../assets/images/case_bg/earthquake.jpg'); }
@@ -152,49 +133,52 @@ body {
 .bg-flood { background-image: url('../assets/images/case_bg/urbanflooding.jpg'); }
 
 /* =========================================
-   移动端响应式优化
+   4. 特殊组件 (保留: iso-badge 等)
    ========================================= */
-@media (max-width: 768px) {
-  /* 导航栏紧凑化 */
-  .nav-container {
-    padding: 10px 15px;
-    gap: 5px;
-  }
-  .logo { font-size: 18px; }
-  .nav-links a { font-size: 14px; margin-left: 15px; }
-
-  /* 极简页边距 */
-  .main-content {
-    padding: 15px 10px !important;
-    margin: 10px auto;
-    width: 95%;
-  }
-
-  /* 缩小卡片体量 */
-  .case-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .case-card.has-bg {
-    padding: 25px;
-  }
-
-  /* 缩小卡片文字字号，保持标签和按钮不变 */
-  .case-card.has-bg h3 {
-    font-size: 22px !important;
-  }
-  .case-card.has-bg p {
-    font-size: 15px !important;
-  }
-  /* 标签字号 14px，按钮字号 16px 保持不变 */
+.iso-badge-container {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0;
+}
+.iso-badge-container img {
+    width: 100%;
+    display: block;
 }
 
 /* =========================================
-   页脚
+   5. 移动端精准适配 (修改)
    ========================================= */
-footer {
-  text-align: center;
-  padding: 40px;
-  color: #888;
-  font-size: 14px;
+@media (max-width: 768px) {
+    /* 导航栏变紧凑 */
+    .nav-container { padding: 10px 15px; }
+    .logo { font-size: 18px; }
+    .nav-links a { font-size: 14px; margin-left: 10px; }
+
+    /* 极简页边距：解决“缩在中间”的问题 */
+    .main-content {
+        padding: 15px 10px !important;
+        margin: 10px auto;
+        width: 95% !important;
+    }
+
+    /* 缩小卡片与文字 */
+    .case-grid { grid-template-columns: 1fr; gap: 15px; }
+    
+    .case-card.has-bg {
+        padding: 20px; /* 卡片变短 */
+    }
+
+    .case-card.has-bg h3 {
+        font-size: 20px !important; /* 标题缩小 */
+    }
+
+    .case-card.has-bg p {
+        font-size: 14px !important; /* 正文缩小 */
+    }
+
+    /* 标签和按钮字号保持原样 */
+    .case-card.has-bg .tag { font-size: 14px; }
+    .case-card.has-bg .btn { font-size: 16px; }
 }
