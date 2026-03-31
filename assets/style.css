@@ -194,46 +194,49 @@ nav a:hover {
 }
 
 .case-card.has-bg {
-  background-color: #e2e8f0; /* Light grayish-blue (Slate 200) */
-  background-blend-mode: luminosity; /* Tints the image to the gray-blue base */
+  background-color: #0b2e6a; /* A deep, rich blue base - better than previous light gray-blue */
+  background-blend-mode: multiply; /* Tints the entire image to the blue overlay, keeping figures visible */
   background-size: cover;
   background-position: center;
   border: 1px solid rgba(80, 120, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Using dark text for maximum legibility on a light background */
+/* Force all text inside these cards to be white for contrast */
+.case-card.has-bg h3,
+.case-card.has-bg p {
+  color: #ffffff !important;
+}
+
 .case-card.has-bg h3 {
-  color: #0f172a !important; /* Deep charcoal blue */
   font-family: 'Playfair Display', serif;
 }
 
-.case-card.has-bg p {
-  color: #334155 !important; /* Slate gray */
-}
-
+/* Update tags to be distinct with white text */
 .case-card.has-bg .tag {
-  background: rgba(80, 120, 255, 0.1);
-  color: var(--accent-blue); /* Keeping your brand blue for the tags */
+  background: rgba(0, 50, 150, 0.4); /* Stronger blue background for tag contrast */
+  color: #ffffff !important; /* Force white tag text */
 }
 
+/* Style the button in white with a light white border */
 .case-card.has-bg .btn {
-  color: var(--accent-blue) !important;
-  border-bottom-color: rgba(80, 120, 255, 0.3);
+  color: #ffffff !important; /* Force white text on button */
+  border-bottom-color: rgba(255, 255, 255, 0.5); /* Light white-ish border */
 }
 
+/* Hover effect: make the card slightly brighter blue, while retaining contrast */
 .case-card.has-bg:hover {
-  background-color: #f1f5f9; /* Brightens slightly on hover */
+  background-color: #1a4da3; /* Brightens on hover, reveals figure more */
   border-color: var(--accent-blue);
   box-shadow: 0 15px 35px rgba(80, 120, 255, 0.1);
 }
 
-/* Background image assignments with a very subtle light blue overlay */
-.bg-spain { background-image: linear-gradient(rgba(226, 232, 240, 0.4), rgba(226, 232, 240, 0.4)), url('/assets/images/case_bg/traffic.png'); }
-.bg-tehran { background-image: linear-gradient(rgba(226, 232, 240, 0.4), rgba(226, 232, 240, 0.4)), url('/assets/images/case_bg/buildingclapse.jpg'); }
-.bg-aomori { background-image: linear-gradient(rgba(226, 232, 240, 0.4), rgba(226, 232, 240, 0.4)), url('/assets/images/case_bg/earthquake.jpg'); }
-.bg-wildfire { background-image: linear-gradient(rgba(226, 232, 240, 0.4), rgba(226, 232, 240, 0.4)), url('/assets/images/case_bg/wildfire.jpg'); }
-.bg-flood { background-image: linear-gradient(rgba(226, 232, 240, 0.4), rgba(226, 232, 240, 0.4)), url('/assets/images/case_bg/urbanflooding.jpg'); }
+/* Individual Image Assignments with a proper deep blue flat tint overlay (rgba(0, 51, 102, 0.7) - deep navy) */
+.bg-spain { background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('/assets/images/case_bg/traffic.png'); }
+.bg-tehran { background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('/assets/images/case_bg/buildingclapse.jpg'); }
+.bg-aomori { background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('/assets/images/case_bg/earthquake.jpg'); }
+.bg-wildfire { background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('/assets/images/case_bg/wildfire.jpg'); }
+.bg-flood { background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('/assets/images/case_bg/urbanflooding.jpg'); }
 
 .tag {
   display: inline-block;
