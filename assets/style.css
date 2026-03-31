@@ -195,7 +195,7 @@ nav a:hover {
 
 .case-card.has-bg {
   /* Lighter gray with a very subtle blue tint */
-  background-color: rgb(235, 240, 248); 
+  background-color: rgb(146, 188, 255); 
   /* luminosity maps the radar figures to the light tint above */
   background-blend-mode: luminosity; 
   background-size: cover;
@@ -210,7 +210,7 @@ nav a:hover {
 .case-card.has-bg h3,
 .case-card.has-bg p,
 .case-card.has-bg .btn {
-  color: #e0eaff !important; 
+  color: #ffffff !important; 
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); /* Necessary for reading light text on light-gray cards */
 }
 
@@ -243,7 +243,7 @@ nav a:hover {
   font-size: 16px;
   margin-top: 35px;
   padding-bottom: 6px;
-  border-bottom: 3px solid rgba(224, 234, 255, 0.5); /* Matching light blue underline */
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5); /* Matching light blue underline */
   letter-spacing: 0.05em;
 }
 
