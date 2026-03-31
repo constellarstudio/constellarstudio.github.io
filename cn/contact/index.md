@@ -12,7 +12,7 @@ title: 联系我们
       <i class="fas fa-envelope-open-text contact-icon"></i>
       <h3>电子邮件</h3>
       <p>点击下方链接直接发送邮件：</p>
-      <a href="mailto:losaandes@gmail.com?subject=Constellar%20Studio%20Inquiry" class="contact-link"><span class="contact-value">losaandes@gmail.com</span></a>
+      <a href="mailto:constellar.studio@outlook.com?subject=Constellar%20Studio%20Inquiry" class="contact-link"><span class="contact-value">constellar.studio@outlook.com</span></a>
   </div>
 
   <div class="contact-item">

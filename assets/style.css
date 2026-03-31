@@ -193,6 +193,42 @@ nav a:hover {
   z-index: 10; /* 确保在卡片最上层 */
 }
 
+.case-card.has-bg {
+  background-color: #4062d8; /* Deep blue base for the tint */
+  background-blend-mode: luminosity; /* Turns image grayscale & tints it */
+  background-size: cover;
+  background-position: center;
+  border: none;
+}
+
+/* Ensure text is readable over the dark blue overlay */
+.case-card.has-bg h3, 
+.case-card.has-bg p,
+.case-card.has-bg .tag {
+  color: #ffffff;
+}
+
+.case-card.has-bg .tag {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.case-card.has-bg .btn {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.case-card.has-bg:hover {
+  background-color: var(--accent-blue); /* Brightens on hover */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Image Assignments */
+.bg-spain { background-image: url('/assets/images/case_bg/traffic.png'); }
+.bg-tehran { background-image: url('/assets/images/case_bg/buildingclapse.jpg'); }
+.bg-aomori { background-image: url('/assets/images/case_bg/earthquake.jpg'); }
+.bg-wildfire { background-image: url('/assets/images/case_bg/wildfire.jpg'); }
+.bg-flood { background-image: url('/assets/images/case_bg/urbanflooding.jpg'); }
+
 .tag {
   display: inline-block;
   font-size: 11px;

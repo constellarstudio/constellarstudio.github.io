@@ -12,7 +12,7 @@ For research inquiries, technical consulting (InSAR), or project requests, pleas
       <i class="fas fa-envelope-open-text contact-icon"></i>
       <h3>Email</h3>
       <p>Click below to send an email</p>
-      <a href="mailto:losaandes@gmail.com?subject=Constellar%20Studio%20Inquiry" class="contact-link"><span class="contact-value">losaandes@gmail.com</span></a>
+      <a href="mailto:constellar.studio@outlook.com?subject=Constellar%20Studio%20Inquiry" class="contact-link"><span class="contact-value">constellar.studio@outlook.com</span></a>
   </div>
 
   <div class="contact-item">
