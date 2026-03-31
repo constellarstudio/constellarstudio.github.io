@@ -194,44 +194,46 @@ nav a:hover {
 }
 
 .case-card.has-bg {
-  background-color: #2547a6; /* More vibrant blue than navy, but darker than your accent-blue */
-  background-blend-mode: multiply; /* Tints the image without blacking it out */
+  background-color: #e2e8f0; /* Light grayish-blue (Slate 200) */
+  background-blend-mode: luminosity; /* Tints the image to the gray-blue base */
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(80, 120, 255, 0.2);
-  transition: all 0.4s ease;
+  border: 1px solid rgba(80, 120, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Bright white text for maximum legibility */
-.case-card.has-bg h3, 
-.case-card.has-bg p,
-.case-card.has-bg .btn {
-  color: #ffffff !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle "lift" to text visibility */
+/* Using dark text for maximum legibility on a light background */
+.case-card.has-bg h3 {
+  color: #0f172a !important; /* Deep charcoal blue */
+  font-family: 'Playfair Display', serif;
+}
+
+.case-card.has-bg p {
+  color: #334155 !important; /* Slate gray */
 }
 
 .case-card.has-bg .tag {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  backdrop-filter: blur(4px);
+  background: rgba(80, 120, 255, 0.1);
+  color: var(--accent-blue); /* Keeping your brand blue for the tags */
 }
 
 .case-card.has-bg .btn {
-  border-bottom-color: rgba(255, 255, 255, 0.6);
+  color: var(--accent-blue) !important;
+  border-bottom-color: rgba(80, 120, 255, 0.3);
 }
 
 .case-card.has-bg:hover {
-  background-color: #315cd5; /* Brightens up on hover to reveal even more detail */
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  background-color: #f1f5f9; /* Brightens slightly on hover */
+  border-color: var(--accent-blue);
+  box-shadow: 0 15px 35px rgba(80, 120, 255, 0.1);
 }
 
-/* Updated Image Assignments with a lighter gradient overlay */
-.bg-spain { background-image: linear-gradient(rgba(37, 71, 166, 0.2), rgba(37, 71, 166, 0.5)), url('/assets/images/case_bg/traffic.png'); }
-.bg-tehran { background-image: linear-gradient(rgba(37, 71, 166, 0.2), rgba(37, 71, 166, 0.5)), url('/assets/images/case_bg/buildingclapse.jpg'); }
-.bg-aomori { background-image: linear-gradient(rgba(37, 71, 166, 0.2), rgba(37, 71, 166, 0.5)), url('/assets/images/case_bg/earthquake.jpg'); }
-.bg-wildfire { background-image: linear-gradient(rgba(37, 71, 166, 0.2), rgba(37, 71, 166, 0.5)), url('/assets/images/case_bg/wildfire.jpg'); }
-.bg-flood { background-image: linear-gradient(rgba(37, 71, 166, 0.2), rgba(37, 71, 166, 0.5)), url('/assets/images/case_bg/urbanflooding.jpg'); }
+/* Background image assignments with a very subtle light blue overlay */
+.bg-spain { background-image: linear-gradient(rgba(226, 232, 240, 0.4), rgba(226, 232, 240, 0.4)), url('/assets/images/case_bg/traffic.png'); }
+.bg-tehran { background-image: linear-gradient(rgba(226, 232, 240, 0.4), rgba(226, 232, 240, 0.4)), url('/assets/images/case_bg/buildingclapse.jpg'); }
+.bg-aomori { background-image: linear-gradient(rgba(226, 232, 240, 0.4), rgba(226, 232, 240, 0.4)), url('/assets/images/case_bg/earthquake.jpg'); }
+.bg-wildfire { background-image: linear-gradient(rgba(226, 232, 240, 0.4), rgba(226, 232, 240, 0.4)), url('/assets/images/case_bg/wildfire.jpg'); }
+.bg-flood { background-image: linear-gradient(rgba(226, 232, 240, 0.4), rgba(226, 232, 240, 0.4)), url('/assets/images/case_bg/urbanflooding.jpg'); }
 
 .tag {
   display: inline-block;
