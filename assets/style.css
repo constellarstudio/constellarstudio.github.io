@@ -491,13 +491,28 @@ h1 {
         gap: 20px;
     }
 
+    .case-card.has-bg {
+        padding: 25px; /* 移动端适当减小内边距 */
+    }
+
+    /* 3. 确保文字在小屏幕上不会过大导致溢出 */
+    .case-card.has-bg h3 {
+        font-size: 24px; /* 略微调小标题 */
+    }
+    
+    .case-card.has-bg p {
+        font-size: 16px;
+    }
+
     .contact-method-container {
         flex-direction: column; /* 手机上变成上下堆叠 */
         gap: 20px;
     }
 
     .main-content {
-        padding-bottom: 40px !important;
+        padding: 20px 20px !important; /* 从 60px 缩减到 20px */
+        margin: 0 auto; /* 移除外边距，充分利用宽度 */
+        border-radius: 0; /* 移动端去掉圆角通常视觉效果更好 */
     }
 
     .customer-grid {
