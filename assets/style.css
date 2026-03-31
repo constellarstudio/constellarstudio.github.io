@@ -194,44 +194,64 @@ nav a:hover {
 }
 
 .case-card.has-bg {
-  /* Your requested light navy color */
-  background-color: rgb(34, 61, 106); 
-  
-  /* luminosity strips the image color and applies the background-color tint */
-  background-blend-mode: luminosity; 
+  background-color: rgb(122, 149, 194); /* Your requested light navy tint */
+  background-blend-mode: luminosity; /* Creates the grayscale-to-blue effect */
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(34, 61, 106, 0.3);
+  border: 1px solid rgba(122, 149, 194, 0.4);
+  padding: 40px; /* Increased padding for better internal spacing */
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Ensure white text for high contrast against the navy tint */
+/* Dark Blue Text with Light Blue Edges */
 .case-card.has-bg h3,
-.case-card.has-bg p {
-  color: #ffffff !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle lift for readability */
-}
-
-/* Updated Tag and Button styling for the new palette */
-.case-card.has-bg .tag {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffffff !important;
-  backdrop-filter: blur(4px);
-}
-
+.case-card.has-bg p,
 .case-card.has-bg .btn {
-  color: #ffffff !important;
-  border-bottom-color: rgba(255, 255, 255, 0.6);
+  /* Dark blue (nearly black) text color */
+  color: #0a1931 !important; 
+  /* Light blue/white "edge" effect (halo) for contrast */
+  text-shadow: 
+    -1px -1px 0 rgba(255, 255, 255, 0.8),  
+     1px -1px 0 rgba(255, 255, 255, 0.8),
+    -1px  1px 0 rgba(255, 255, 255, 0.8),
+     1px  1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Font Size Increases */
+.case-card.has-bg h3 {
+  font-size: 26px; /* Increased from 22px */
+  margin-bottom: 20px;
+}
+
+.case-card.has-bg p {
+  font-size: 17px; /* Increased from 15px */
+  line-height: 1.6;
+}
+
+/* Larger Labels/Tags */
+.case-card.has-bg .tag {
+  font-size: 13px; /* Increased from 11px */
+  padding: 4px 12px;
+  background: rgba(10, 25, 49, 0.1); /* Darker background for the tag area */
+  color: #0a1931 !important;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+/* Larger Read More Button */
+.case-card.has-bg .btn {
+  font-size: 15px; /* Increased from 13px */
+  border-bottom: 2px solid #0a1931;
+  margin-top: 30px;
 }
 
 .case-card.has-bg:hover {
-  /* Slightly shift the color on hover to feel interactive */
-  background-color: rgb(34, 61, 106); 
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  background-color: rgb(142, 169, 214); /* Lightens slightly on hover */
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Individual Image Assignments */
+/* Background image assignments */
 .bg-spain { background-image: url('/assets/images/case_bg/traffic.png'); }
 .bg-tehran { background-image: url('/assets/images/case_bg/buildingclapse.jpg'); }
 .bg-aomori { background-image: url('/assets/images/case_bg/earthquake.jpg'); }
