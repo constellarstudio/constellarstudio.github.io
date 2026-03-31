@@ -149,11 +149,16 @@ nav a:hover {
 
 .case-card {
   background-color: var(--glass-blue);
-  background-image: var(--grid-pattern); /* 加入几何纹理 */
+  background-image: var(--grid-pattern);
   padding: 35px;
   border-radius: 8px;
   border: 1px solid rgba(80, 120, 255, 0.15);
   backdrop-filter: blur(12px);
+  /* 关键：防止溢出遮挡圆角 */
+  overflow: hidden; 
+  /* 关键：增加硬件加速，防止抖动 */
+  transform: translateZ(0);
+  backface-visibility: hidden;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
   flex-direction: column;
@@ -185,24 +190,23 @@ nav a:hover {
 
 .case-card .btn::after {
   content: "";
-  position: absolute; /* 相对于 .case-card 定位 */
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10; /* 确保在卡片最上层 */
+  width: 100%;
+  height: 100%;
+  z-index: 5;
 }
 
 .case-card.has-bg {
-  /* Lighter gray with a very subtle blue tint */
   background-color: rgb(113, 144, 193); 
-  /* luminosity maps the radar figures to the light tint above */
   background-blend-mode: luminosity; 
   background-size: cover;
   background-position: center;
+  /* 确保这里也强制执行圆角 */
+  border-radius: 8px; 
   border: 1px solid rgba(80, 120, 255, 0.1);
   padding: 45px;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /* 2. Text color changed to Very Light Blue */
