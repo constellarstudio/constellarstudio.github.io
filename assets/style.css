@@ -1,184 +1,480 @@
 :root {
   --accent-blue: #5078ff;
   --glass-blue: rgba(235, 242, 255, 0.7);
+  /* 淡淡的几何网格纹理 */
   --grid-pattern: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%235078ff' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* =========================================
-   1. 全局与基础布局 (保留)
+   全局样式与字体引入
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@400;500;600&display=swap');
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #1a1a1a;
   background-color: #f5f7f9;
   margin: 0;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased; /* 字体抗锯齿，更精致 */
 }
 
-.main-content {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 40px 60px;
-  background: #ffffff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  border-radius: 16px;
-  position: relative;
-  z-index: 1;
-}
-
-/* =========================================
-   2. 导航与页脚 (精简并保留)
-   ========================================= */
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+/* 布局容器 */
+.site-header {
+  padding: 15px 0;
   position: sticky;
   top: 0;
+  backdrop-filter: blur(10px);
   z-index: 100;
+  background: #f5f7f9;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* 增加微妙阴影，区分背景 */
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  text-decoration: none;
-  color: #1a1a1a;
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #4a4a4a;
-  margin-left: 30px;
-  transition: color 0.3s;
+  margin-right: 20px; /* 代替原来的 &nbsp; */
 }
 
-.nav-links a:hover { color: var(--accent-blue); }
+nav {
+  font-family: 'Inter', sans-serif;
+}
 
-footer { text-align: center; padding: 40px; color: #888; font-size: 14px; }
+nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s ease;
+}
 
-/* =========================================
-   3. 案例卡片核心样式 (精准修改)
-   ========================================= */
+nav a:hover {
+  opacity: 0.6;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.lang-switch .lang-link {
+  color: #999; /* 未选中的浅灰色 */
+  font-weight: 400;
+  padding: 0 4px;
+  text-transform: uppercase; /* EN大写 */
+}
+
+.lang-switch .active-lang {
+  color: var(--accent-blue); /* 选中后的深色 */
+  font-weight: 600;
+  padding: 0 4px;
+  text-transform: uppercase;
+}
+
+.lang-switch .separator {
+  margin: 0 2px;
+  color: #ddd;
+  font-weight: 300;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1a1a1a;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+.logo span {
+    color: var(--accent-blue);
+}
+
+.main-content {
+  max-width: 1200px;
+  background: #f5f7f9;
+  padding: 40px 60px;
+  margin: 10px auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* 极细微的投影 */
+  padding-bottom: 120px !important;
+}
+
+/* 案例页标题样式 */
+.main-content h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+/* 案例页段落样式 */
+.main-content p {
+  font-size: 17px; /* 略大一点的字号 */
+  color: #3a3a3a;  /* 柔和的深灰色 */
+  line-height: 1.8; /* 增大行高，消除拥挤感 */
+  margin-bottom: 25px;
+}
+
+/* 强调文字（如 LOS, dNBR 等术语） */
+.main-content strong {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.main-content img {
+  max-width: 100%;    /* 图片最大宽度不超过容器 */
+  height: auto;       /* 高度按比例自适应 */
+  display: block;     /* 消除下方间隙 */
+  margin: 30px auto;  /* 居中并增加上下间距 */
+  border-radius: 6px; /* 增加微圆角，更柔和 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 淡淡的阴影，让专业图表更立体 */
+}
+
 .case-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* 增大了间距，更有高端感 */
+  margin-top: 50px;
 }
 
 .case-card.has-bg {
-  position: relative;
-  /* 要求的浅灰色+蓝调覆盖层 */
-  background-color: rgb(225, 230, 245); 
-  background-blend-mode: luminosity;
+  /* Lighter gray with a very subtle blue tint */
+  background-color: rgb(113, 144, 193); 
+  /* luminosity maps the radar figures to the light tint above */
+  background-blend-mode: luminosity; 
   background-size: cover;
   background-position: center;
-  padding: 45px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.4s ease;
   border: 1px solid rgba(80, 120, 255, 0.1);
+  padding: 45px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* 要求的浅蓝色文字 + 阴影增强可读性 */
+/* 2. Text color changed to Very Light Blue */
+/* Note: Using a very light blue (#e0eaff) with a subtle dark shadow to ensure visibility on the light background */
 .case-card.has-bg h3,
 .case-card.has-bg p,
 .case-card.has-bg .btn {
-  color: #e0eaff !important;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff !important; 
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); /* Necessary for reading light text on light-gray cards */
 }
 
 .case-card.has-bg h3 {
-  font-family: 'Playfair Display', serif;
   font-size: 28px;
-  margin: 15px 0;
+  margin-bottom: 20px;
+  line-height: 1.3;
 }
 
 .case-card.has-bg p {
   font-size: 18px;
-  margin-bottom: 25px;
+  line-height: 1.7;
 }
 
-/* 标签样式：不透明度增加 */
+/* 3. Labels with increased font size and less transparency */
 .case-card.has-bg .tag {
   font-size: 14px;
   padding: 6px 16px;
-  background: rgba(10, 30, 70, 0.9) !important; 
-  color: #ffffff !important;
+  /* Higher opacity background (0.85) to make the label pop */
+  background: rgba(30, 58, 138, 0.85); 
+  color: #ffffff !important; /* Pure white text for the label for maximum clarity */
   border-radius: 6px;
-  font-weight: 600;
-  text-shadow: none !important;
-  width: fit-content;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-shadow: none; /* Keep labels clean without shadows */
 }
 
+/* 4. Larger "Read More" Button with Very Light Blue text */
 .case-card.has-bg .btn {
   font-size: 16px;
-  text-decoration: none;
-  border-bottom: 2px solid rgba(224, 234, 255, 0.6);
+  margin-top: 35px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5); /* Matching light blue underline */
+  letter-spacing: 0.05em;
+}
+
+/* Interactive Hover State */
+.case-card.has-bg:hover {
+  background-color: rgb(113, 144, 193); /* Becomes clearer on hover */
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(80, 120, 255, 0.15);
+}
+
+/* Background image assignments */
+.bg-spain { background-image: url('/assets/images/case_bg/traffic.png'); }
+.bg-tehran { background-image: url('/assets/images/case_bg/buildingclapse.jpg'); }
+.bg-aomori { background-image: url('/assets/images/case_bg/earthquake.jpg'); }
+.bg-wildfire { background-image: url('/assets/images/case_bg/wildfire.jpg'); }
+.bg-flood { background-image: url('/assets/images/case_bg/urbanflooding.jpg'); }
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-blue);
+  background: rgba(80, 120, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 15px;
   width: fit-content;
 }
 
-/* 背景图定义 */
-.bg-spain { background-image: url('../assets/images/case_bg/traffic.png'); }
-.bg-tehran { background-image: url('../assets/images/case_bg/buildingclapse.jpg'); }
-.bg-aomori { background-image: url('../assets/images/case_bg/earthquake.jpg'); }
-.bg-wildfire { background-image: url('../assets/images/case_bg/wildfire.jpg'); }
-.bg-flood { background-image: url('../assets/images/case_bg/urbanflooding.jpg'); }
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 0 0 4px 0;
+  color: var(--accent-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 2px solid rgba(80, 120, 255, 0.2);
+  transition: all 0.3s ease;
+  width: fit-content;
+}
 
-/* =========================================
-   4. 特殊组件 (保留: iso-badge 等)
-   ========================================= */
+.btn:hover {
+  color: #0033ff;
+  border-bottom-color: #0033ff;
+  padding-left: 5px; /* 悬停时稍微右移，增加动感 */
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1; /* 在按钮文字下方，但在卡片背景上方 */
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  letter-spacing: -0.02em;
+  margin-bottom: 30px;
+  background: linear-gradient(120deg, #1a1a1a 0%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* 标题带一点隐约的渐变蓝，非常高级 */
+}
+
+.contact-method-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-item {
+    flex: 1;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(80, 120, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    text-align: left;
+}
+
+.contact-icon {
+    font-size: 28px;
+    color: var(--accent-blue);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #1a1a1a;
+}
+
+.contact-link {
+    font-weight: 600;
+    color: var(--accent-blue);
+    text-decoration: none;
+    border-bottom: 2px solid rgba(80, 120, 255, 0.2);
+    transition: all 0.2s;
+    cursor: pointer;
+    display: inline-block; /* 确保点击区域准确 */
+}
+
+.contact-link:hover {
+    border-bottom-color: var(--accent-blue);
+    opacity: 0.8;
+}
+
+.contact-id {
+    font-weight: 600;
+    background: #f0f4ff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    color: #1a1a1a;
+}
+
+.section-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent-blue), transparent);
+    margin: 60px 0;
+    opacity: 0.3;
+}
+
+.customers-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #1a1a1a;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.customers-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent-blue);
+    margin: 15px auto 0;
+}
+
+.customer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    align-items: center;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+.customer-item {
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* 更平滑的曲线 */
+    width: 100%;
+    cursor: default;
+}
+
+.customer-item:hover {
+    transform: translateY(-8px); /* 悬浮感更强一点 */
+}
+
+.customer-logo {
+    width: 100%;
+    max-width: 160px;    /* 进一步调大 Logo */
+    height: 110px;       /* 增加高度 */
+    object-fit: contain;
+    filter: none !important; /* 强制取消灰度 */
+    opacity: 1 !important;    /* 强制全透明度 */
+    transition: all 0.3s ease;
+    margin-bottom: 15px !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.customer-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555; /* 稍微加深文字颜色，增加易读性 */
+    line-height: 1.4;
+}
+
 .iso-badge-container {
+    position: relative; 
+    display: block;
+    width: 220px; 
+    margin: 60px auto 20px auto; 
+    z-index: 10; 
+    
     background: transparent !important;
     backdrop-filter: none !important;
     border: none !important;
     box-shadow: none !important;
     padding: 0;
 }
+
 .iso-badge-container img {
     width: 100%;
+    height: auto;
     display: block;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    filter: none !important;
 }
 
-/* =========================================
-   5. 移动端精准适配 (修改)
-   ========================================= */
 @media (max-width: 768px) {
-    /* 导航栏变紧凑 */
-    .nav-container { padding: 10px 15px; }
-    .logo { font-size: 18px; }
-    .nav-links a { font-size: 14px; margin-left: 10px; }
+    /* 1. 导航栏紧凑化 */
+    .nav-container {
+        padding: 10px 15px; /* 减小上下左右边距 */
+        gap: 5px;
+    }
 
-    /* 极简页边距：解决“缩在中间”的问题 */
+    .logo {
+        font-size: 18px; /* 缩小 Logo */
+    }
+
+    .nav-links a {
+        font-size: 15px; /* 稍微缩小导航链接 */
+        margin-right: 10px;
+    }
+
+    /* 2. 极简页边距 */
     .main-content {
-        padding: 15px 10px !important;
-        margin: 10px auto;
-        width: 95% !important;
+        padding: 15px 10px !important; /* 左右边距降至 10px，几乎贴边 */
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    /* 缩小卡片与文字 */
-    .case-grid { grid-template-columns: 1fr; gap: 15px; }
-    
+    /* 3. 缩小案例卡片 */
     .case-card.has-bg {
-        padding: 20px; /* 卡片变短 */
+        padding: 20px; /* 大幅减小卡片内部留白，使其变短 */
+        min-height: auto;
     }
 
+    /* 缩小标题和正文，保留标签和按钮大小 */
     .case-card.has-bg h3 {
-        font-size: 20px !important; /* 标题缩小 */
+        font-size: 20px !important; /* 标题从 24px 降至 20px */
+        margin-bottom: 10px;
     }
 
     .case-card.has-bg p {
-        font-size: 14px !important; /* 正文缩小 */
+        font-size: 14px !important; /* 正文降至 14px */
+        line-height: 1.5;
     }
 
-    /* 标签和按钮字号保持原样 */
-    .case-card.has-bg .tag { font-size: 14px; }
-    .case-card.has-bg .btn { font-size: 16px; }
+    /* 标签和按钮字号保持不变 (14px / 16px) */
+    .case-card.has-bg .tag {
+        font-size: 14px; 
+        margin-bottom: 15px;
+    }
+
+    .case-card.has-bg .btn {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .case-grid {
+        grid-template-columns: 1fr;
+        gap: 15px; /* 缩小卡片之间的间距 */
+    }
+}
+
+@media (max-width: 1024px) {
+    .customer-grid {
+        grid-template-columns: repeat(3, 1fr); /* 平板端 3 列 */
+    }
 }
