@@ -194,43 +194,44 @@ nav a:hover {
 }
 
 .case-card.has-bg {
-  background-color: #0b1a38; /* Very dark navy base */
-  background-blend-mode: multiply; /* Darkens the image into the background */
+  background-color: #2547a6; /* More vibrant blue than navy, but darker than your accent-blue */
+  background-blend-mode: multiply; /* Tints the image without blacking it out */
   background-size: cover;
   background-position: center;
   border: 1px solid rgba(80, 120, 255, 0.2);
   transition: all 0.4s ease;
 }
 
-/* Ensure all text elements are bright white for contrast */
+/* Bright white text for maximum legibility */
 .case-card.has-bg h3, 
 .case-card.has-bg p,
 .case-card.has-bg .btn {
   color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Adds a subtle "lift" to text visibility */
 }
 
 .case-card.has-bg .tag {
-  background: rgba(80, 120, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   backdrop-filter: blur(4px);
 }
 
 .case-card.has-bg .btn {
-  border-bottom-color: rgba(255, 255, 255, 0.4);
+  border-bottom-color: rgba(255, 255, 255, 0.6);
 }
 
 .case-card.has-bg:hover {
-  background-color: #122b5e; /* Slightly lighter on hover */
+  background-color: #315cd5; /* Brightens up on hover to reveal even more detail */
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Specific Image Assignments with a darkening gradient */
-.bg-spain { background-image: linear-gradient(rgba(11, 26, 56, 0.2), rgba(11, 26, 56, 0.8)), url('/assets/images/case_bg/traffic.png'); }
-.bg-tehran { background-image: linear-gradient(rgba(11, 26, 56, 0.2), rgba(11, 26, 56, 0.8)), url('/assets/images/case_bg/buildingclapse.jpg'); }
-.bg-aomori { background-image: linear-gradient(rgba(11, 26, 56, 0.2), rgba(11, 26, 56, 0.8)), url('/assets/images/case_bg/earthquake.jpg'); }
-.bg-wildfire { background-image: linear-gradient(rgba(11, 26, 56, 0.2), rgba(11, 26, 56, 0.8)), url('/assets/images/case_bg/wildfire.jpg'); }
-.bg-flood { background-image: linear-gradient(rgba(11, 26, 56, 0.2), rgba(11, 26, 56, 0.8)), url('/assets/images/case_bg/urbanflooding.jpg'); }
+/* Updated Image Assignments with a lighter gradient overlay */
+.bg-spain { background-image: linear-gradient(rgba(37, 71, 166, 0.2), rgba(37, 71, 166, 0.5)), url('/assets/images/case_bg/traffic.png'); }
+.bg-tehran { background-image: linear-gradient(rgba(37, 71, 166, 0.2), rgba(37, 71, 166, 0.5)), url('/assets/images/case_bg/buildingclapse.jpg'); }
+.bg-aomori { background-image: linear-gradient(rgba(37, 71, 166, 0.2), rgba(37, 71, 166, 0.5)), url('/assets/images/case_bg/earthquake.jpg'); }
+.bg-wildfire { background-image: linear-gradient(rgba(37, 71, 166, 0.2), rgba(37, 71, 166, 0.5)), url('/assets/images/case_bg/wildfire.jpg'); }
+.bg-flood { background-image: linear-gradient(rgba(37, 71, 166, 0.2), rgba(37, 71, 166, 0.5)), url('/assets/images/case_bg/urbanflooding.jpg'); }
 
 .tag {
   display: inline-block;
