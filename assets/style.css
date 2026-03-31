@@ -194,61 +194,57 @@ nav a:hover {
 }
 
 .case-card.has-bg {
-  background-color: rgb(122, 149, 194); /* Your requested light navy tint */
-  background-blend-mode: luminosity; /* Creates the grayscale-to-blue effect */
+  /* A very light gray with a soft blue tint */
+  background-color: rgb(220, 230, 245); 
+  /* luminosity keeps the figure details but maps them to the light tint above */
+  background-blend-mode: luminosity; 
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(122, 149, 194, 0.4);
-  padding: 40px; /* Increased padding for better internal spacing */
+  border: 1px solid rgba(80, 120, 255, 0.1);
+  padding: 45px; /* Increased padding for a more spacious, high-end feel */
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Dark Blue Text with Light Blue Edges */
-.case-card.has-bg h3,
-.case-card.has-bg p,
-.case-card.has-bg .btn {
-  /* Dark blue (nearly black) text color */
-  color: #0a1931 !important; 
-  /* Light blue/white "edge" effect (halo) for contrast */
-  text-shadow: 
-    -1px -1px 0 rgba(255, 255, 255, 0.8),  
-     1px -1px 0 rgba(255, 255, 255, 0.8),
-    -1px  1px 0 rgba(255, 255, 255, 0.8),
-     1px  1px 0 rgba(255, 255, 255, 0.8);
-}
-
-/* Font Size Increases */
+/* 2. Increased Font Sizes for Titles and Descriptions */
 .case-card.has-bg h3 {
-  font-size: 26px; /* Increased from 22px */
+  font-size: 28px; /* Increased for better hierarchy */
+  color: #1a2a44 !important; /* Deep navy (nearly black) for contrast */
   margin-bottom: 20px;
+  line-height: 1.3;
 }
 
 .case-card.has-bg p {
-  font-size: 17px; /* Increased from 15px */
-  line-height: 1.6;
+  font-size: 18px; /* Larger body text for readability */
+  color: #334155 !important;
+  line-height: 1.7;
 }
 
-/* Larger Labels/Tags */
+/* 3. Larger Labels (Tags) with scaled-up text */
 .case-card.has-bg .tag {
-  font-size: 13px; /* Increased from 11px */
-  padding: 4px 12px;
-  background: rgba(10, 25, 49, 0.1); /* Darker background for the tag area */
-  color: #0a1931 !important;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 14px; /* Increased from 11px */
+  padding: 6px 16px; /* Larger hit area */
+  background: rgba(80, 120, 255, 0.15);
+  color: #1e3a8a !important; /* Stronger blue for the label text */
+  border-radius: 6px;
   font-weight: 700;
+  margin-bottom: 25px;
 }
 
-/* Larger Read More Button */
+/* 4. Larger "Read More" Button and Text */
 .case-card.has-bg .btn {
-  font-size: 15px; /* Increased from 13px */
-  border-bottom: 2px solid #0a1931;
-  margin-top: 30px;
+  font-size: 16px; /* Increased from 13px */
+  margin-top: 35px;
+  padding-bottom: 6px;
+  color: #1e3a8a !important;
+  border-bottom: 3px solid rgba(30, 58, 138, 0.3); /* Thicker underline for the larger text */
+  letter-spacing: 0.05em;
 }
 
+/* Interactive Hover State */
 .case-card.has-bg:hover {
-  background-color: rgb(142, 169, 214); /* Lightens slightly on hover */
+  background-color: #ffffff; /* Becomes even lighter/clearer on hover */
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(80, 120, 255, 0.12);
 }
 
 /* Background image assignments */
