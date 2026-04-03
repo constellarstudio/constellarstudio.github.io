@@ -44,4 +44,11 @@ title: 案例展示
 <a href="/cn/cases/bth_flood/" class="btn">阅读更多</a>
 </div>
 
+<div class="case-card has-bg bg-glacier">
+<span class="tag">冰川流速监测</span>
+<h3>基于光学及雷达遥感的山地冰川流速精细估算</h3>
+<p>融合雷达和光学遥感，实现复杂山地冰川流速精确估算</p>
+<a href="/cn/cases/glacier_velocity/" class="btn">阅读更多</a>
+</div>
+
 </div>

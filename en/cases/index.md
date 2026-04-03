@@ -44,4 +44,11 @@ Explore our latest projects in remote sensing and geospatial analysis.
 <a href="/en/cases/bth_flood/" class="btn">Read More</a>
 </div>
 
+<div class="case-card has-bg bg-glacier">
+<span class="tag">Glacier Velocity</span>
+<h3>High-Resolution Estimation of Mountain Glacier Velocity Based on Optical and Radar Remote Sensing</h3>
+<p>Combining Sentinel-1 SAR and Sentinel-2 optical imagery to achieve high-resolution glacier velocity estimation.</p>
+<a href="/en/cases/glacier_velocity/" class="btn">Read More</a>
+</div>
+
 </div>

@@ -264,6 +264,7 @@ nav a:hover {
 .bg-aomori { background-image: url('/assets/images/case_bg/earthquake.jpg'); }
 .bg-wildfire { background-image: url('/assets/images/case_bg/wildfire.jpg'); }
 .bg-flood { background-image: url('/assets/images/case_bg/urbanflooding.jpg'); }
+.bg-glacier { background-image: url('/assets/images/case_bg/glacier.png'); }
 
 .tag {
   display: inline-block;
