@@ -265,7 +265,7 @@ nav a:hover {
 .bg-wildfire { background-image: url('/assets/images/case_bg/wildfire.jpg'); }
 .bg-flood { background-image: url('/assets/images/case_bg/urbanflooding.jpg'); }
 .bg-glacier { background-image: url('/assets/images/case_bg/glacier.png'); }
-.bg-glacier { background-image: url('/assets/images/case_bg/germanmine.webp'); }
+.bg-german { background-image: url('/assets/images/case_bg/germanmine.webp'); }
 
 .tag {
   display: inline-block;

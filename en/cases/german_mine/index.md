@@ -15,9 +15,7 @@ The study area lies between Aachen and Cologne and represents one of the largest
 
 This study employs the Small Baseline Subset (SBAS) InSAR technique to derive deformation velocity fields and time series from Sentinel-1 SAR data. The processing workflow includes co-registration, interferogram generation, topographic phase removal, phase unwrapping, and time-series inversion.
 
-To mitigate atmospheric effects, a **common-point stacking** approach is applied to estimate the Atmospheric Phase Screen (APS). Compared to conventional planar fitting, this method better preserves large-scale, low-frequency deformation signals, which are critical in mining environments.
-
-In addition, coherence-based pixel selection is used to improve inversion stability by filtering out low-quality observations and reducing noise propagation.
+To mitigate atmospheric effects, a common-point stacking approach is applied to estimate the Atmospheric Phase Screen (APS). Compared to conventional planar fitting, this method better preserves large-scale, low-frequency deformation signals, which are critical in mining environments. In addition, coherence-based pixel selection is used to improve inversion stability by filtering out low-quality observations and reducing noise propagation.
 
 Ascending and descending orbit data are further combined to decompose line-of-sight (LOS) deformation into vertical and horizontal components, providing a more comprehensive characterization of ground movement.
 
@@ -79,10 +77,6 @@ This case demonstrates that InSAR time-series analysis can:
 - Support risk assessment and long-term monitoring in mining environments  
 
 Compared to traditional methods, InSAR offers wide-area coverage, cost efficiency, and consistent temporal observations, making it particularly suitable for continuously evolving engineering settings.
-
----
-
-## Summary
 
 By integrating SBAS-InSAR with multi-orbit observations, this study reconstructs two-dimensional deformation fields and significantly improves the interpretation of complex surface movements in mining areas.
 
