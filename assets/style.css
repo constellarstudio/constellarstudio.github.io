@@ -259,12 +259,13 @@ nav a:hover {
 }
 
 /* Background image assignments */
-.bg-spain { background-image: url('/assets/images/case_bg/traffic.png'); }
+.bg-spain { background-image: url('/assets/images/case_bg/traffic.webp'); }
 .bg-tehran { background-image: url('/assets/images/case_bg/buildingclapse.jpg'); }
 .bg-aomori { background-image: url('/assets/images/case_bg/earthquake.jpg'); }
 .bg-wildfire { background-image: url('/assets/images/case_bg/wildfire.jpg'); }
 .bg-flood { background-image: url('/assets/images/case_bg/urbanflooding.jpg'); }
 .bg-glacier { background-image: url('/assets/images/case_bg/glacier.png'); }
+.bg-glacier { background-image: url('/assets/images/case_bg/germanmine.webp'); }
 
 .tag {
   display: inline-block;

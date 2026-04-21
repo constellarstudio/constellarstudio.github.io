@@ -9,6 +9,20 @@ Explore our latest projects in remote sensing and geospatial analysis.
 
 <div class="case-grid">
 
+<div class="case-card has-bg bg-german">
+<span class="tag">Natural Resources</span>
+<h3>Open-Pit Mine Deformation Monitoring and Stability Assessment</h3>
+<p>Detecting subsidence and slope displacement from SAR data to support mining safety and operational decision-making.</p>
+<a href="/en/cases/german_mine/" class="btn">Read More</a>
+</div>
+
+<div class="case-card has-bg bg-glacier">
+<span class="tag">Glacier Velocity</span>
+<h3>High-Resolution Estimation of Mountain Glacier Velocity Based on Optical and Radar Remote Sensing</h3>
+<p>Combining Sentinel-1 SAR and Sentinel-2 optical imagery to achieve high-resolution glacier velocity estimation.</p>
+<a href="/en/cases/glacier_velocity/" class="btn">Read More</a>
+</div>
+
 <div class="case-card has-bg bg-spain">
 <span class="tag">Transport / Infrastructure</span>
 <h3>Monitoring Transport Infrastructure Subsidence with Time-Series InSAR</h3>
@@ -42,13 +56,6 @@ Explore our latest projects in remote sensing and geospatial analysis.
 <h3>Multi-source Remote Sensing of Extreme Flooding in BTH Region</h3>
 <p>Combining Sentinel-1 SAR and Sentinel-2 optical imagery to map flood extent and evaluate multi-sensor capabilities.</p>
 <a href="/en/cases/bth_flood/" class="btn">Read More</a>
-</div>
-
-<div class="case-card has-bg bg-glacier">
-<span class="tag">Glacier Velocity</span>
-<h3>High-Resolution Estimation of Mountain Glacier Velocity Based on Optical and Radar Remote Sensing</h3>
-<p>Combining Sentinel-1 SAR and Sentinel-2 optical imagery to achieve high-resolution glacier velocity estimation.</p>
-<a href="/en/cases/glacier_velocity/" class="btn">Read More</a>
 </div>
 
 </div>

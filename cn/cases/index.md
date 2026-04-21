@@ -9,6 +9,20 @@ title: 案例展示
 
 <div class="case-grid">
 
+<div class="case-card has-bg bg-german">
+<span class="tag">自然资源</span>
+<h3>露天矿地表形变监测与边坡稳定性分析</h3>
+<p>基于多时相SAR数据识别沉降中心与边坡位移，支持矿区风险评估与长期监测。</p>
+<a href="/cn/cases/german_mine/" class="btn">阅读更多</a>
+</div>
+
+<div class="case-card has-bg bg-glacier">
+<span class="tag">冰川流速监测</span>
+<h3>基于光学及雷达遥感的山地冰川流速精细估算</h3>
+<p>融合雷达和光学遥感，实现复杂山地冰川流速精确估算</p>
+<a href="/cn/cases/glacier_velocity/" class="btn">阅读更多</a>
+</div>
+
 <div class="case-card has-bg bg-spain">
 <span class="tag">交通 / 基础设施</span>
 <h3>基于时序InSAR的交通基础设施沉降监测</h3>
@@ -42,13 +56,6 @@ title: 案例展示
 <h3>多源遥感下的京津冀极端暴雨洪涝监测</h3>
 <p>融合多源卫星影像，在强降雨条件下提取洪水范围并对比不同传感器的监测能力。</p>
 <a href="/cn/cases/bth_flood/" class="btn">阅读更多</a>
-</div>
-
-<div class="case-card has-bg bg-glacier">
-<span class="tag">冰川流速监测</span>
-<h3>基于光学及雷达遥感的山地冰川流速精细估算</h3>
-<p>融合雷达和光学遥感，实现复杂山地冰川流速精确估算</p>
-<a href="/cn/cases/glacier_velocity/" class="btn">阅读更多</a>
 </div>
 
 </div>
