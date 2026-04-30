@@ -81,3 +81,5 @@ Compared to traditional methods, InSAR offers wide-area coverage, cost efficienc
 By integrating SBAS-InSAR with multi-orbit observations, this study reconstructs two-dimensional deformation fields and significantly improves the interpretation of complex surface movements in mining areas.
 
 The methodology is broadly applicable to engineering monitoring scenarios, including infrastructure stability assessment and geohazard analysis, demonstrating the value of spaceborne SAR in real-world applications.
+
+![Displacement visualization](/assets/images/german_mine/ts_visualization.webp)
