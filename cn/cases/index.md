@@ -9,6 +9,13 @@ title: 案例展示
 
 <div class="case-grid">
 
+<div class="case-card has-bg bg-permian">
+<span class="tag">能源 / 地表形变</span>
+<h3>基于时序InSAR的Permian盆地油气开发沉降监测</h3>
+<p>利用升降轨Sentinel-1数据监测油气开发引起的长期地表沉降，揭示Pecos地区形变演化特征及潜在断层相关地表运动。</p>
+<a href="/cn/cases/permian_deformation/" class="btn">阅读更多</a>
+</div>
+
 <div class="case-card has-bg bg-german">
 <span class="tag">自然资源</span>
 <h3>露天矿地表形变监测与边坡稳定性分析</h3>

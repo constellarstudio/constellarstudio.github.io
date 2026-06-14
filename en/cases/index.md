@@ -9,6 +9,13 @@ Explore our latest projects in remote sensing and geospatial analysis.
 
 <div class="case-grid">
 
+<div class="case-card has-bg bg-permian">
+<span class="tag">Energy / Ground Deformation</span>
+<h3>Monitoring Oilfield-Induced Subsidence in the Permian Basin with Time-Series InSAR</h3>
+<p>Using multi-orbit Sentinel-1 observations to map long-term subsidence associated with oil and gas production, revealing deformation evolution and potential fault-related ground motion near Pecos, Texas.</p>
+<a href="/en/cases/permian_deformation/" class="btn">Read More</a>
+</div>
+
 <div class="case-card has-bg bg-german">
 <span class="tag">Natural Resources</span>
 <h3>Open-Pit Mine Deformation Monitoring and Stability Assessment</h3>
