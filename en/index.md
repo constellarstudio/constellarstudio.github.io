@@ -18,6 +18,7 @@ Through careful analysis of radar data, we aim to support decision-making in eng
 - Risk identification in roads, bridges, buildings, and other critical infrastructure
 - Detection and environmental consulting for natural hazards such as wildfires, floods, landslides, and permafrost degradation
 
+<!--
 <hr class="section-divider">
 
 <h2 class="customers-title">Our Customers</h2>
@@ -44,3 +45,4 @@ Through careful analysis of radar data, we aim to support decision-making in eng
     <span class="customer-name">University of Texas <br>at Austin</span>
   </div>
 </div>
+-->

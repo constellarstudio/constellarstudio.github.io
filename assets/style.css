@@ -383,6 +383,7 @@ h1 {
     opacity: 0.3;
 }
 
+/* --- Customers section (commented out) ---
 .customers-title {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
@@ -414,22 +415,22 @@ h1 {
 
 .customer-item {
     text-align: center;
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* 更平滑的曲线 */
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     width: 100%;
     cursor: default;
 }
 
 .customer-item:hover {
-    transform: translateY(-8px); /* 悬浮感更强一点 */
+    transform: translateY(-8px);
 }
 
 .customer-logo {
     width: 100%;
-    max-width: 160px;    /* 进一步调大 Logo */
-    height: 110px;       /* 增加高度 */
+    max-width: 160px;
+    height: 110px;
     object-fit: contain;
-    filter: none !important; /* 强制取消灰度 */
-    opacity: 1 !important;    /* 强制全透明度 */
+    filter: none !important;
+    opacity: 1 !important;
     transition: all 0.3s ease;
     margin-bottom: 15px !important;
     box-shadow: none !important;
@@ -440,9 +441,10 @@ h1 {
     display: block;
     font-size: 14px;
     font-weight: 500;
-    color: #555; /* 稍微加深文字颜色，增加易读性 */
+    color: #555;
     line-height: 1.4;
 }
+--- End customers section */
 
 .iso-badge-container {
     position: relative; 
@@ -531,8 +533,10 @@ h1 {
     }
 }
 
+/* --- Customers section (commented out) ---
 @media (max-width: 1024px) {
     .customer-grid {
-        grid-template-columns: repeat(3, 1fr); /* 平板端 3 列 */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
+--- End customers section */

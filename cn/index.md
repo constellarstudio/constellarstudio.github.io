@@ -18,6 +18,7 @@ layout: default
 - 道路、桥梁、建筑等关键基础设施风险识别  
 - 野火、洪水、滑坡及多年冻土等自然灾害监测与环境咨询  
 
+<!--
 <hr class="section-divider">
 
 <h2 class="customers-title">合作客户</h2>
@@ -44,3 +45,4 @@ layout: default
     <span class="customer-name">美国德克萨斯<br>州立大学</span>
   </div>
 </div>
+-->
