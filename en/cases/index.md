@@ -9,6 +9,13 @@ Explore our latest projects in remote sensing and geospatial analysis.
 
 <div class="case-grid">
 
+<div class="case-card has-bg bg-tanchang">
+<span class="tag">Orbit Refinement</span>
+<h3>Refine LuTan-1 satellite orbit using EKF</h3>
+<p>Using the Extended Kalman Filter (EKF) algorithm to correct crude orbit data, effectively removing orbital error fringes from the interferogram to enable faster high-precision analysis for sudden geological disasters like landslides.</p>
+<a href="/en/cases/tanchang/" class="btn">Read More</a>
+</div>
+
 <div class="case-card has-bg bg-permian">
 <span class="tag">Energy / Ground Deformation</span>
 <h3>Monitoring Oilfield-Induced Subsidence in the Permian Basin with Time-Series InSAR</h3>

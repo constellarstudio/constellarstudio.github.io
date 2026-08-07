@@ -267,6 +267,7 @@ nav a:hover {
 .bg-glacier { background-image: url('/assets/images/case_bg/glacier.png'); }
 .bg-german { background-image: url('/assets/images/case_bg/germanmine.webp'); }
 .bg-permian { background-image: url('/assets/images/case_bg/permian.jpg'); }
+.bg-tanchang { background-image: url('/assets/images/case_bg/landslide.jpg'); }
 
 .tag {
   display: inline-block;

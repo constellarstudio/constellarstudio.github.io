@@ -9,6 +9,13 @@ title: 案例展示
 
 <div class="case-grid">
 
+<div class="case-card has-bg bg-tanchang">
+<span class="tag">轨道精化处理</span>
+<h3>利用EKF精化处理陆探1号轨道数据</h3>
+<p>通过扩展卡尔曼滤波（EKF）算法成功实现陆探1号卫星数据粗轨精化，有效去除了干涉图中的轨道误差条纹，为滑坡等突发地质灾害的高精度灾情分析提供了更快速的响应方案。</p>
+<a href="/cn/cases/tanchang/" class="btn">阅读更多</a>
+</div>
+
 <div class="case-card has-bg bg-permian">
 <span class="tag">能源 / 地表形变</span>
 <h3>基于时序InSAR的Permian盆地油气开发沉降监测</h3>
