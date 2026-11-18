@@ -1,0 +1,79 @@
+# 软件产品清单
+#
+# 新增软件只需在本文件末尾追加一条记录，并在
+# assets/images/software/<id>/ 下放置对应素材即可，
+# 页面模板（_includes/software-card.html）会自动渲染。
+#
+# 字段说明：
+#   id                  锚点标识，同时用作素材目录名
+#   name                软件名称
+#   logo                软件 Logo 路径
+#   screenshot          界面截图路径
+#   subtitle            副标题（通常为英文全称，中英文页共用）
+#   category            软件分类（按语言）
+#   tags                关键词标签（按语言，列表）
+#   summary             简介（按语言）
+#   highlights          核心能力（按语言，列表，每项含 title / text）
+#   screenshot_alt      截图替代文本（按语言）
+#   screenshot_caption  截图说明（按语言）
+#   links               相关链接（按语言，列表，每项含 label / url，可为空）
+- id: potato
+  name: POTATO
+  logo: /assets/images/software/potato/logo.png
+  screenshot: /assets/images/software/potato/screenshot.png
+  subtitle: P-band Over-ice Tandem Airborne Tomography Observatory
+  category:
+    cn: 机载 P 波段冰川层析 SAR 处理软件
+    en: Airborne P-band Glacier Tomography SAR Software
+  tags:
+    cn:
+      - 机载 P 波段 SAR
+      - 多站层析
+      - 基岩深度反演
+    en:
+      - Airborne P-band SAR
+      - Multi-station Tomography
+      - Bedrock Depth Retrieval
+  summary:
+    cn: POTATO 是一套面向机载 P 波段多站冰川层析 SAR 数据的一体化处理软件。它覆盖从原始回波、同步链、POS/惯导与 DEM 到冰面成像、相位定标、三维层析、基岩深度提取及产品导出的完整处理链，帮助用户获得冰川表面与冰下基岩的三维结构信息。
+    en: POTATO is an integrated processing package for multi-station, P-band airborne glacier tomography SAR data. It covers the full chain from raw echoes, sync-link records, POS/INS trajectories and DEMs through ice-surface imaging, phase calibration and three-dimensional tomography to bedrock-depth extraction and product export, revealing the three-dimensional structure of both the glacier surface and its bed.
+  highlights:
+    cn:
+      - title: 端到端冰下层析处理
+        text: 从原始回波、同步链和 POS/惯导轨迹出发，依次完成距离压缩、同步补偿、冰面聚焦、相位定标与三维层析，直至基岩产品导出。
+      - title: 多站编队与三维成像
+        text: 面向双主站、双从站可配置的机载 P 波段编队，采用时域后向投影聚焦与层析重聚焦，获得沿深度方向分层的复图像。
+      - title: 相位定标与误差校正
+        text: 通过相位链接与 PCDL 相位定标，估计并补偿轨迹误差和 DEM 误差，提高干涉与层析结果的相干性与精度。
+      - title: 基岩深度与产品导出
+        text: 由层析幅度立方体提取基岩面，支持可见性、聚类与置信度筛选、深度合并与 Kriging 插值，导出 GeoTIFF、点云、剖面及 GPR 对比产品。
+      - title: 命令行与桌面界面
+        text: 阶段化、可重入的命令行子命令便于批处理与复算；以“项目”为单位的桌面界面集成文件浏览、图像查看、处理进度与运行日志。
+      - title: GPU 加速
+        text: 提供编译计算内核，加速 BP 聚焦、层析等计算密集阶段，并支持按航过、帧、极化与主从站组合并行调度。
+    en:
+      - title: End-to-end subglacial tomography
+        text: Starting from raw echoes, sync-link records and POS/INS trajectories, the pipeline runs range compression, sync compensation, ice-surface focusing, phase calibration and 3D tomography through to bedrock product export.
+      - title: Multi-station formation and 3D imaging
+        text: Designed for configurable airborne P-band formations with dual master and dual slave stations, using time-domain back-projection focusing and tomographic refocusing to obtain depth-layered complex images.
+      - title: Phase calibration and error correction
+        text: Phase linking and PCDL phase calibration estimate and compensate trajectory and DEM errors, improving the coherence and accuracy of interferometric and tomographic results.
+      - title: Bedrock depth and product export
+        text: Bedrock surfaces are extracted from the tomographic amplitude cube with visibility, clustering and confidence screening, followed by depth merging and Kriging interpolation, and exported as GeoTIFF, point clouds, sections and GPR comparison products.
+      - title: Command line and desktop interface
+        text: Stage-based, re-entrant command-line subcommands support batch processing and re-runs, while a project-oriented desktop interface integrates file browsing, image viewing, progress and logs.
+      - title: GPU acceleration
+        text: Compiled compute kernels accelerate intensive stages such as BP focusing and tomography, with parallel scheduling over tracks, frames, polarizations and master-slave station combinations.
+  screenshot_alt:
+    cn: POTATO 桌面界面截图，显示冰川基岩深度三维点云与项目文件树
+    en: Screenshot of the POTATO desktop interface showing a 3D glacier bedrock-depth point cloud and the project file tree
+  screenshot_caption:
+    cn: POTATO 桌面界面：左侧为项目文件树与处理进度，右侧为冰川基岩深度三维点云。
+    en: The POTATO desktop interface, with the project file tree and processing status on the left and a 3D glacier bedrock-depth point cloud on the right.
+  links:
+    cn:
+      - label: 咨询与合作
+        url: /cn/contact/
+    en:
+      - label: Inquiries
+        url: /en/contact/

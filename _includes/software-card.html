@@ -1,0 +1,53 @@
+{%- comment -%}
+  软件产品卡片模板。
+
+  用法：{% include software-card.html item=软件记录 lang="cn" %}
+  - item：来自 _data/software.yml 的一条软件记录
+  - lang："cn" 或 "en"
+
+  新增软件时无需修改本模板。
+{%- endcomment -%}
+{%- assign item = include.item -%}
+{%- assign lang = include.lang -%}
+<article class="software-card" id="{{ item.id }}">
+
+  <div class="software-head">
+    <img class="software-logo" src="{{ item.logo | relative_url }}" alt="{{ item.name }} logo">
+    <div class="software-heading">
+      <span class="software-category">{{ item.category[lang] }}</span>
+      <h2>{{ item.name }}</h2>
+      <p class="software-subtitle">{{ item.subtitle }}</p>
+      <div class="software-tags">
+        {%- for tag in item.tags[lang] %}
+        <span class="software-keyword">{{ tag }}</span>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+
+  <p class="software-summary">{{ item.summary[lang] }}</p>
+
+  <div class="software-highlight-grid">
+    {%- for feature in item.highlights[lang] %}
+    <div class="software-highlight">
+      <h3>{{ feature.title }}</h3>
+      <p>{{ feature.text }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <figure class="software-shot">
+    <img src="{{ item.screenshot | relative_url }}" alt="{{ item.screenshot_alt[lang] }}">
+    <figcaption>{{ item.screenshot_caption[lang] }}</figcaption>
+  </figure>
+
+  {%- assign links = item.links[lang] -%}
+  {%- if links and links != empty %}
+  <div class="software-links">
+    {%- for link in links %}
+    <a class="software-link" href="{{ link.url | relative_url }}">{{ link.label }} <span aria-hidden="true">&rarr;</span></a>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+
+</article>

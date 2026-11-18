@@ -477,19 +477,30 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    /* 1. 导航栏紧凑化 */
+    /* 1. 导航栏紧凑化：Logo 与语言切换同排，导航链接单独居中的一行 */
     .nav-container {
         padding: 10px 15px; /* 减小上下左右边距 */
-        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 4px;
     }
 
     .logo {
         font-size: 18px; /* 缩小 Logo */
     }
 
+    .nav-links {
+        order: 3;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+    }
+
     .nav-links a {
-        font-size: 15px; /* 稍微缩小导航链接 */
-        margin-right: 10px;
+        font-size: 14px;
+        margin-right: 0;
+        white-space: nowrap;
     }
 
     /* 2. 极简页边距 */
@@ -541,3 +552,219 @@ h1 {
     }
 }
 --- End customers section */
+
+/* =========================================
+   软件页
+   数据来自 _data/software.yml，由
+   _includes/software-card.html 渲染。
+   ========================================= */
+.software-list {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 45px;
+}
+
+.software-card {
+    background: #ffffff;
+    border: 1px solid rgba(80, 120, 255, 0.14);
+    border-radius: 10px;
+    padding: 45px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+.software-head {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(80, 120, 255, 0.12);
+}
+
+.main-content .software-logo {
+    width: 112px;
+    height: 112px;
+    flex: none;
+    object-fit: contain;
+    margin: 0;
+    padding: 10px;
+    background: #f5f7f9;
+    border-radius: 20px;
+    box-shadow: none;
+}
+
+.software-heading {
+    min-width: 0;
+}
+
+.software-category {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--accent-blue);
+    background: rgba(80, 120, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.main-content .software-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin: 10px 0 4px;
+    color: #1a1a1a;
+}
+
+.main-content .software-subtitle {
+    font-size: 14px;
+    color: #556080;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    margin: 0 0 12px;
+}
+
+.software-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.software-keyword {
+    font-size: 12px;
+    color: #556080;
+    background: #f0f4ff;
+    border: 1px solid rgba(80, 120, 255, 0.14);
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+.main-content .software-summary {
+    font-size: 17px;
+    color: #3a3a3a;
+    line-height: 1.8;
+    margin: 30px 0 0;
+}
+
+.software-highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.software-highlight {
+    background: linear-gradient(140deg, rgba(235, 242, 255, 0.85), #f7f9ff);
+    border: 1px solid rgba(80, 120, 255, 0.1);
+    border-radius: 8px;
+    padding: 22px 24px;
+}
+
+.main-content .software-highlight h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #1a1a1a;
+    margin: 0 0 8px;
+}
+
+.main-content .software-highlight p {
+    font-size: 14px;
+    color: #556080;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.software-shot {
+    margin: 35px 0 0;
+}
+
+.main-content .software-shot img {
+    width: 100%;
+    margin: 0;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.main-content .software-shot figcaption {
+    font-size: 13px;
+    color: #7a8298;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 12px;
+}
+
+.software-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.software-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid rgba(80, 120, 255, 0.2);
+    transition: color 0.2s ease, border-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.software-link:hover {
+    color: #0033ff;
+    border-bottom-color: #0033ff;
+    padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .software-list {
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    .software-card {
+        padding: 22px;
+    }
+
+    .software-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding-bottom: 22px;
+    }
+
+    .main-content .software-logo {
+        width: 84px;
+        height: 84px;
+        border-radius: 16px;
+    }
+
+    .main-content .software-heading h2 {
+        font-size: 26px;
+    }
+
+    .main-content .software-summary {
+        font-size: 15px;
+        margin-top: 22px;
+    }
+
+    .software-highlight-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 22px;
+    }
+
+    .main-content .software-highlight {
+        padding: 18px;
+    }
+
+    .software-shot {
+        margin-top: 24px;
+    }
+}
